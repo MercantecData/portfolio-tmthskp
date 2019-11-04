@@ -9,3 +9,14 @@ C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Array_opg
 C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Array_opg_int_input_med_taeller\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.AssemblyInfo.cs
 C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Array_opg_int_input_med_taeller\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.dll
 C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Array_opg_int_input_med_taeller\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.pdb
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.exe
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.deps.json
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.runtimeconfig.json
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.runtimeconfig.dev.json
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.dll
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\bin\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.pdb
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.csprojAssemblyReference.cache
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.AssemblyInfoInputs.cache
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.AssemblyInfo.cs
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.dll
+C:\Users\tmth.skp\Desktop\GitHub_projekt\Portfolio_code\portfolio-tmthskp\Portfolie_counter\Array_opg_int_input_med_taeller\obj\Debug\netcoreapp3.0\Array_opg_int_input_med_taeller.pdb

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tmth.skp\\Desktop\\Projekter\\hovedforløb\\h1\\Objekt_orientering\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller.csproj",
+      "projectUniqueName": "C:\\Users\\tmth.skp\\Desktop\\GitHub_projekt\\Portfolio_code\\portfolio-tmthskp\\Portfolie_counter\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller.csproj",
       "projectName": "Array_opg_int_input_med_taeller",
-      "projectPath": "C:\\Users\\tmth.skp\\Desktop\\Projekter\\hovedforløb\\h1\\Objekt_orientering\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller.csproj",
+      "projectPath": "C:\\Users\\tmth.skp\\Desktop\\GitHub_projekt\\Portfolio_code\\portfolio-tmthskp\\Portfolie_counter\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller.csproj",
       "packagesPath": "C:\\Users\\tmth.skp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tmth.skp\\Desktop\\Projekter\\hovedforløb\\h1\\Objekt_orientering\\Array_opg_int_input_med_taeller\\Array_opg_int_input_med_taeller\\obj\\",
+      "outputPath": "C:\\Users\\tmth.skp\\Desktop\\GitHub_projekt\\Portfolio_code\\portfolio-tmthskp\\Portfolie_counter\\Array_opg_int_input_med_taeller\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
