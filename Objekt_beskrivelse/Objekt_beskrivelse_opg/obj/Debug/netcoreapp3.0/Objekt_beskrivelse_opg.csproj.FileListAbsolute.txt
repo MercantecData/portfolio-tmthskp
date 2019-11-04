@@ -1,0 +1,11 @@
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.exe
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.deps.json
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.runtimeconfig.json
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.runtimeconfig.dev.json
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.dll
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\bin\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.pdb
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\obj\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.csprojAssemblyReference.cache
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\obj\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.AssemblyInfoInputs.cache
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\obj\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.AssemblyInfo.cs
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\obj\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.dll
+C:\Users\tmth.skp\Desktop\Projekter\hovedforløb\h1\Objekt_orientering\Objekt_beskrivelse_opg\Objekt_beskrivelse_opg\obj\Debug\netcoreapp3.0\Objekt_beskrivelse_opg.pdb
