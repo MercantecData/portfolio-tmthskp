@@ -11,12 +11,11 @@ namespace Library_project
 
         public string Welcome()
         {
-            string welcome = "Welcome to the library we got these books to choose from";
-            
+            string welcome = "Welcome to the library we got these books to choose from";           
             return welcome;
         }
-    public Library()
-    {
+        public Library()
+        {
             var Book1 = new Book(1, "Gone", 300);
             var Book2 = new Book(1, "Gone again", 200);
             var Book3 = new Book(1, "Gone again extended", 400);
@@ -26,36 +25,36 @@ namespace Library_project
             books.Add(Book3);
         }
 
-
-        
-            
-
         public void BookBurrow()
         {
             Console.WriteLine("cool What book do you wanna burrow");
 
             for (int i = 0; i < books.Count; i++)
             {
-                Console.WriteLine((i + 1) + "Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
+                Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
             }
 
-            Console.WriteLine("choose from number");
+            Console.WriteLine("Choose from number");
             string input = (Console.ReadLine());
-            Int32.TryParse(input, out int bookToBorrowIndex);
-            if (bookToBorrowIndex - 1 >= books.Count)
-            {
-                Console.WriteLine("No Can do No Book");
-            }
-            else
+            bool bConvert = Int32.TryParse(input, out int bookToBorrowIndex);
+ 
+
+            if (bConvert && bookToBorrowIndex - 1 < books.Count && bookToBorrowIndex >= 0)    
             {
                 borrowedBooks.Add(books[bookToBorrowIndex - 1]);
                 books.RemoveAt(bookToBorrowIndex - 1);
 
                 for (int i = 0; i < books.Count; i++)
                 {
-                    Console.WriteLine((i + 1) + "Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
+                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
                 }
+                Console.WriteLine("Thank you. You can Burrow it for " + burrowTime + " days");
+            }
 
+            else
+            {
+                Console.WriteLine("No Can do. No Book");
+                BookBurrowSwitch();
             }
         }
         public void BookReturn()
@@ -63,25 +62,27 @@ namespace Library_project
             Console.WriteLine("Okay What book do you wanna Return? ");
             for (int i = 0; i <borrowedBooks.Count; i++)
             {
-                Console.WriteLine((i + 1) + "Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
+                Console.WriteLine("Nr " + (i + 1) + " Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
             }
-            Console.WriteLine("choose from number");
+            Console.WriteLine("Choose from number");
             string input2 = (Console.ReadLine());
-            Int32.TryParse(input2, out int bookToReturnIndex);
-            if (bookToReturnIndex - 1 >= borrowedBooks.Count)
-            {
-                Console.WriteLine("No Can do No Book");
-            }
-
-            else
+            bool bConvert2 = Int32.TryParse(input2, out int bookToReturnIndex);
+            if (bConvert2 && bookToReturnIndex - 1 < borrowedBooks.Count && bookToReturnIndex >= 0)
             {
                 books.Add(borrowedBooks[bookToReturnIndex - 1]);
                 borrowedBooks.RemoveAt(bookToReturnIndex - 1);
 
                 for (int i = 0; i < borrowedBooks.Count; i++)
                 {
-                    Console.WriteLine((i + 1) + "Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
+                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
                 }
+                Console.WriteLine("\nThank you have a nice day");
+            }
+            
+            else
+            {
+                Console.WriteLine("No Can do. No Book");
+                BookReturnSwitch();
             }
         }
 
@@ -123,7 +124,8 @@ namespace Library_project
 
                 case "no":
                 case "n":
-                    Console.WriteLine("Okay, then Have a good day");
+                    
+                    ExtendBurrowTimeSwitch();
                     break;
 
                 default:
@@ -132,6 +134,42 @@ namespace Library_project
                     break;
             }
         }
+        
+        public int burrowTime = 5;
+                
+        public void ExtendBurrowTimeSwitch()
+        {
+            Console.WriteLine("do you wanna Change burrow time?");
+            Console.WriteLine("Yes \nNo");
+            string userResponse2 = Console.ReadLine();
+            switch (userResponse2.ToLower())
+            {
+                case "yes":
+                case "y":
+                    Console.WriteLine("How many days do you wanna burrow it?");
+                    string extendTime = (Console.ReadLine());
+                    try { 
+                    burrowTime = Convert.ToInt32(extendTime);
+                    Console.WriteLine("The book can now be burrowed for " + burrowTime + " days ");
+                    Console.WriteLine("\nHave a Nice day");
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("No valid number");
+                        ExtendBurrowTimeSwitch();
+                    }
+                    break;
 
+                case "no":
+                case "n":
+                    Console.WriteLine("Okay, then Have a good day");
+                    break;
+
+                default:
+                    Console.WriteLine("I'm sorry, I didn't understand that!");
+                    ExtendBurrowTimeSwitch();
+                    break;
+            }
+        }
     }
 }
