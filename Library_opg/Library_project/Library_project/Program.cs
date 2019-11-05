@@ -1,29 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Library_project
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
-            Library welcome = new Library();
-            Console.WriteLine(welcome.Welcome());
+            
+            Library library = new Library();
+            Console.WriteLine(library.Welcome());
             Console.WriteLine("");
 
-            var Book1 = new Book("Gone", 300);
-            Console.WriteLine(Book1.Title);
-            Console.WriteLine(Book1.Pages + " Pages ");
-            Console.WriteLine("");
 
-            var Book2 = new Book("Gone again", 200);
-            Console.WriteLine(Book2.Title);
-            Console.WriteLine(Book2.Pages + " Pages ");
-            Console.WriteLine("");
+            Console.WriteLine("Amount: " + library.books[0].Amount + " Title " + library.books[0].Title + " Pages " + library.books[0].Pages);
+            Console.WriteLine("Amount: " + library.books[1].Amount + " Title " + library.books[1].Title + " Pages " + library.books[1].Pages);
+            Console.WriteLine("Amount: " + library.books[2].Amount + " Title " + library.books[2].Title + " Pages " + library.books[2].Pages);
 
-            var Book3 = new Book("Gone again extended", 400);
-            Console.WriteLine(Book3.Title);
-            Console.WriteLine(Book3.Pages + " Pages ");
-            Console.WriteLine("");         
+            library.BookBurrowSwitch();
+            library.BookReturnSwitch();
         }
+
+        
+
     }
 }
