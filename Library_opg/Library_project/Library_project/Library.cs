@@ -27,8 +27,8 @@ namespace Library_project
 
         public void BookBurrow()
         {
-            Console.WriteLine("cool What book do you wanna burrow");
-
+            Console.WriteLine("Cool What book do you wanna burrow");
+            Console.WriteLine("");
             for (int i = 0; i < books.Count; i++)
             {
                 Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
@@ -43,12 +43,12 @@ namespace Library_project
             {
                 borrowedBooks.Add(books[bookToBorrowIndex - 1]);
                 books.RemoveAt(bookToBorrowIndex - 1);
-
+                Console.WriteLine("\nThese books are left in library after burrow");
                 for (int i = 0; i < books.Count; i++)
                 {
-                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
+                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);                   
                 }
-                Console.WriteLine("Thank you. You can Burrow it for " + burrowTime + " days");
+                Console.WriteLine("\nThank you. You can Burrow it for " + burrowTime + " days");
             }
 
             else
@@ -64,6 +64,7 @@ namespace Library_project
             {
                 Console.WriteLine("Nr " + (i + 1) + " Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
             }
+            
             Console.WriteLine("Choose from number");
             string input2 = (Console.ReadLine());
             bool bConvert2 = Int32.TryParse(input2, out int bookToReturnIndex);
@@ -112,7 +113,7 @@ namespace Library_project
 
         public void BookReturnSwitch()
         {
-            Console.WriteLine("\nDo you wanna return a book then?");
+            Console.WriteLine("\nDo you wanna return a book?");
             Console.WriteLine("Yes \nNo");
             string userResponse1 = Console.ReadLine();
             switch (userResponse1.ToLower())
@@ -139,7 +140,7 @@ namespace Library_project
                 
         public void ExtendBurrowTimeSwitch()
         {
-            Console.WriteLine("do you wanna Change burrow time?");
+            Console.WriteLine("\nDo you wanna Change burrow time?");
             Console.WriteLine("Yes \nNo");
             string userResponse2 = Console.ReadLine();
             switch (userResponse2.ToLower())
