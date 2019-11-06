@@ -14,6 +14,8 @@ namespace Library_project
             string welcome = "Welcome to the library we got these books to choose from";           
             return welcome;
         }
+
+        /********* Book Data Commit *********/
         public Library()
         {
             var Book1 = new Book(1, "Gone", 300);
@@ -25,6 +27,7 @@ namespace Library_project
             books.Add(Book3);
         }
 
+        /********* Book burrow part *********/
         public void BookBurrow()
         {
             Console.WriteLine("Cool What book do you wanna burrow");
@@ -57,6 +60,8 @@ namespace Library_project
                 BookBurrowSwitch();
             }
         }
+
+        /********* Book return part *********/
         public void BookReturn()
         {
             Console.WriteLine("Okay What book do you wanna Return? ");
@@ -87,11 +92,13 @@ namespace Library_project
             }
         }
 
+        /********* Book burrow Switch *********/
         public void BookBurrowSwitch()
         {
             Console.WriteLine("\nDo you wanna borrow a book?");
             Console.WriteLine("Yes \nNo");
             string userResponse = Console.ReadLine();
+            
             switch (userResponse.ToLower())
             {
                 case "yes":
@@ -111,11 +118,13 @@ namespace Library_project
             }
         }
 
+        /********* Book return switch *********/
         public void BookReturnSwitch()
         {
             Console.WriteLine("\nDo you wanna return a book?");
             Console.WriteLine("Yes \nNo");
             string userResponse1 = Console.ReadLine();
+            
             switch (userResponse1.ToLower())
             {
                 case "yes":
@@ -136,13 +145,15 @@ namespace Library_project
             }
         }
         
-        public int burrowTime = 5;
-                
+        public int burrowTime = 5; // public variable for burrow time
+
+        /********* Burrow time extend switch *********/
         public void ExtendBurrowTimeSwitch()
         {
             Console.WriteLine("\nDo you wanna Change burrow time?");
             Console.WriteLine("Yes \nNo");
             string userResponse2 = Console.ReadLine();
+            
             switch (userResponse2.ToLower())
             {
                 case "yes":
