@@ -41,7 +41,6 @@ namespace Library_project
             string input = (Console.ReadLine());
             bool bConvert = Int32.TryParse(input, out int bookToBorrowIndex);
  
-
             if (bConvert && bookToBorrowIndex - 1 < books.Count && bookToBorrowIndex >= 0)    
             {
                 borrowedBooks.Add(books[bookToBorrowIndex - 1]);
