@@ -6,6 +6,7 @@ namespace Library_project
 {
     class Library
     {
+        //convert classes to objects
         public List<Book> books = new List<Book>();
         public List<Book> borrowedBooks = new List<Book>();
         LibText text = new LibText();
@@ -14,7 +15,7 @@ namespace Library_project
 
         public string Welcome()
         {
-            string welcome = "Welcome to the library we got these books to choose from";           
+            string welcome = "Welcome to the library we got these books to choose from \nTake a Look at our sortments of books available";           
             return welcome;
         }
 
@@ -34,13 +35,13 @@ namespace Library_project
         public void BookBurrow()
         {
             text.MyBurrowText1();
-            for (int i = 0; i < books.Count; i++)
+            for (int i = 0; i < books.Count; i++) // For each element in the list print from method MyBurrowText2
             {
                 text.MyBurrowText2(this, i);
             }
 
             string input = text.MyBurrowText3();
-            bool bConvert = Int32.TryParse(input, out int bookToBorrowIndex);
+            bool bConvert = Int32.TryParse(input, out int bookToBorrowIndex); //converts input string to a Int32 
 
             if (bConvert && bookToBorrowIndex - 1 < books.Count && bookToBorrowIndex >= 0)    
             {
@@ -87,7 +88,7 @@ namespace Library_project
             
             else
             {
-                text.MyBurrowText10();
+                text.MyBurrowText6();
                 switches.BookReturnSwitch(this);
             }
         }

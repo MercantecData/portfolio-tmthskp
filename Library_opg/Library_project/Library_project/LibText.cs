@@ -13,7 +13,7 @@ namespace Library_project
             Console.WriteLine("");
         }
 
-        public void MyBurrowText2(Library library, int i)
+        public void MyBurrowText2(Library library, int i)// Collects library and int from Library for calls in the method
         {
             Console.WriteLine("Nr " + (i + 1) + " Amount: " + library.books[i].Amount + " Title " + library.books[i].Title + " Pages " + library.books[i].Pages);
         }
@@ -54,10 +54,6 @@ namespace Library_project
             Console.WriteLine("\nThank you have a nice day");
         }
 
-        public void MyBurrowText10()
-        {
-            Console.WriteLine("No Can do. No Book");
-        }
 
         public string MySwitchText1()
         {

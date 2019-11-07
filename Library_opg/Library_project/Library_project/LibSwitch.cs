@@ -5,13 +5,13 @@ using System.Text;
 namespace Library_project
 {
     class LibSwitch
-    {
-        LibText textSwitch = new LibText();
+    {      
+        LibText textSwitch = new LibText(); //Convert class LibText to an object
 
         /********* Book burrow Switch *********/
-        public void BookBurrowSwitch(Library lib)
+        public void BookBurrowSwitch(Library lib) //whilst called also send Library
         {         
-            string userResponse = textSwitch.MySwitchText1();
+            string userResponse = textSwitch.MySwitchText1(); //a new variable to use from elements collected from LibText class
             switch (userResponse.ToLower())
             {
                 case "yes":
