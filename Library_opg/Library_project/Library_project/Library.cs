@@ -8,6 +8,9 @@ namespace Library_project
     {
         public List<Book> books = new List<Book>();
         public List<Book> borrowedBooks = new List<Book>();
+        LibText text = new LibText();
+        LibSwitch switches = new LibSwitch();
+        public int burrowTime = 5; // public variable for burrow time
 
         public string Welcome()
         {
@@ -18,59 +21,56 @@ namespace Library_project
         /********* Book Data Commit *********/
         public Library()
         {
-            var Book1 = new Book(1, "Gone", 300);
-            var Book2 = new Book(1, "Gone again", 200);
-            var Book3 = new Book(1, "Gone again extended", 400);
+            Book Book1 = new Book(1, "Gone", 300);
+            Book Book2 = new Book(1, "Gone again", 200);
+            Book Book3 = new Book(1, "Gone again extended", 400);
 
             books.Add(Book1);
             books.Add(Book2);
             books.Add(Book3);
         }
-
+ 
         /********* Book burrow part *********/
         public void BookBurrow()
         {
-            Console.WriteLine("Cool What book do you wanna burrow");
-            Console.WriteLine("");
+            text.MyBurrowText1();
             for (int i = 0; i < books.Count; i++)
             {
-                Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);
+                text.MyBurrowText2(this, i);
             }
 
-            Console.WriteLine("Choose from number");
-            string input = (Console.ReadLine());
+            string input = text.MyBurrowText3();
             bool bConvert = Int32.TryParse(input, out int bookToBorrowIndex);
- 
+
             if (bConvert && bookToBorrowIndex - 1 < books.Count && bookToBorrowIndex >= 0)    
             {
                 borrowedBooks.Add(books[bookToBorrowIndex - 1]);
                 books.RemoveAt(bookToBorrowIndex - 1);
-                Console.WriteLine("\nThese books are left in library after burrow");
+                text.MyBurrowText4();
                 for (int i = 0; i < books.Count; i++)
                 {
-                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + books[i].Amount + " Title " + books[i].Title + " Pages " + books[i].Pages);                   
+                    text.MyBurrowText2(this, i);                                 
                 }
-                Console.WriteLine("\nThank you. You can Burrow it for " + burrowTime + " days");
+                text.MyBurrowText5(this);
             }
 
             else
             {
-                Console.WriteLine("No Can do. No Book");
-                BookBurrowSwitch();
+                text.MyBurrowText6();
+                switches.BookBurrowSwitch(this);
             }
         }
 
         /********* Book return part *********/
         public void BookReturn()
         {
-            Console.WriteLine("Okay What book do you wanna Return? ");
+            text.MyBurrowText7();
             for (int i = 0; i <borrowedBooks.Count; i++)
             {
-                Console.WriteLine("Nr " + (i + 1) + " Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
+                text.MyBurrowText8(this, i);               
             }
-            
-            Console.WriteLine("Choose from number");
-            string input2 = (Console.ReadLine());
+
+            string input2 = text.MyBurrowText3();
             bool bConvert2 = Int32.TryParse(input2, out int bookToReturnIndex);
             if (bConvert2 && bookToReturnIndex - 1 < borrowedBooks.Count && bookToReturnIndex >= 0)
             {
@@ -79,108 +79,19 @@ namespace Library_project
 
                 for (int i = 0; i < borrowedBooks.Count; i++)
                 {
-                    Console.WriteLine("Nr " + (i + 1) + " Amount: " + borrowedBooks[i].Amount + " Title " + borrowedBooks[i].Title + " Pages " + borrowedBooks[i].Pages);
+                    text.MyBurrowText8(this, i);
+                    
                 }
-                Console.WriteLine("\nThank you have a nice day");
+                text.MyBurrowText9();
             }
             
             else
             {
-                Console.WriteLine("No Can do. No Book");
-                BookReturnSwitch();
+                text.MyBurrowText10();
+                switches.BookReturnSwitch(this);
             }
         }
 
-        /********* Book burrow Switch *********/
-        public void BookBurrowSwitch()
-        {
-            Console.WriteLine("\nDo you wanna borrow a book?");
-            Console.WriteLine("Yes \nNo");
-            string userResponse = Console.ReadLine();
-            
-            switch (userResponse.ToLower())
-            {
-                case "yes":
-                case "y":
-                    BookBurrow();
-                    break;
-
-                case "no":
-                case "n":
-                    Console.WriteLine("okay Then ");
-                    break;
-
-                default:
-                    Console.WriteLine("I'm sorry, I didn't understand that!");
-                    BookBurrowSwitch();
-                    break;
-            }
-        }
-
-        /********* Book return switch *********/
-        public void BookReturnSwitch()
-        {
-            Console.WriteLine("\nDo you wanna return a book?");
-            Console.WriteLine("Yes \nNo");
-            string userResponse1 = Console.ReadLine();
-            
-            switch (userResponse1.ToLower())
-            {
-                case "yes":
-                case "y":
-                    BookReturn();
-                    break;
-
-                case "no":
-                case "n":
-                    
-                    ExtendBurrowTimeSwitch();
-                    break;
-
-                default:
-                    Console.WriteLine("I'm sorry, I didn't understand that!");
-                    BookReturnSwitch();
-                    break;
-            }
-        }
-        
-        public int burrowTime = 5; // public variable for burrow time
-
-        /********* Burrow time extend switch *********/
-        public void ExtendBurrowTimeSwitch()
-        {
-            Console.WriteLine("\nDo you wanna Change burrow time?");
-            Console.WriteLine("Yes \nNo");
-            string userResponse2 = Console.ReadLine();
-            
-            switch (userResponse2.ToLower())
-            {
-                case "yes":
-                case "y":
-                    Console.WriteLine("How many days do you wanna burrow it?");
-                    string extendTime = (Console.ReadLine());
-                    try { 
-                    burrowTime = Convert.ToInt32(extendTime);
-                    Console.WriteLine("The book can now be burrowed for " + burrowTime + " days ");
-                    Console.WriteLine("\nHave a Nice day");
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("No valid number");
-                        ExtendBurrowTimeSwitch();
-                    }
-                    break;
-
-                case "no":
-                case "n":
-                    Console.WriteLine("Okay, then Have a good day");
-                    break;
-
-                default:
-                    Console.WriteLine("I'm sorry, I didn't understand that!");
-                    ExtendBurrowTimeSwitch();
-                    break;
-            }
-        }
+       
     }
 }
