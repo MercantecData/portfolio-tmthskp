@@ -1,0 +1,710 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Body tag i css bliver ofte brugt til fx at sætte en basic skrift format*/
+body{
+	margin:0px;
+	color:#fff;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	line-height:15px;
+	background-color:#333333;
+	background-repeat:repeat;
+	overflow-y:scroll;
+	}
+	
+/* Sidens wrapper holder alt indholdet, og styrer placering, højre, venstre, midten*/
+#wrapper{
+	width:900px;
+	height:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+	min-height:600px;
+	}
+	
+/*Her starter Sidens top - header styles*/
+.top{
+	width:800px;
+	height:80px;
+	margin-top:30px;
+	}
+	
+/*Her starter Sidens top - header H1 tags styles*/	
+/* ved at bestemme h1 tag som dette vil det kun være i top classen at den vil have denne funktion*/
+/*resten af h1 tags vil være deafault uden for top classen med mindre andet er tilføjet*/
+/*i de andre tags som fx i test-box classen*/
+.top h1{ 
+	font-size:50px;						
+	margin:0px; 				
+	line-height:80px;			
+	text-indent:25px;
+	display:block;
+	width:42%;
+	color:#fff;
+	text-decoration:none;
+	float:left;
+	}
+
+.top h2{
+	font-family:Verdana, Geneva, sans-serif;
+	font-style:italic;
+	font-size:24px;
+	display:block;
+	text-decoration:none;
+	float:left;
+	line-height:50px;
+	}
+
+/*Her starter global links menu bar styles*/	
+.top-menu{
+	padding-left:30px;
+	margin-left:10px;
+	float:left;
+	border-top-right-radius:15px;
+	border-top-left-radius:15px;
+	background-color:#009de0;
+	width:786px;
+	height:30px;
+	float:left;
+	position:relative;
+	z-index:1;
+	}		
+
+/*Her starter mine ul il styles*/
+#nav, #nav ul {
+	padding:0px;
+	margin: 0px;
+	list-style: none;
+	}
+
+#nav a {
+	line-height:30px;	
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-right:5px;	
+	}
+
+#nav a:hover{
+	line-height:30px;	
+	color:#FC9;
+	text-decoration:none;
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-right:5px;
+	}
+	
+#nav li {
+	float: left;
+	width:100px;
+	}
+
+#nav li ul {
+	float: left;
+	position: absolute;
+	width:100px;
+	left: -15984px;
+	}
+
+#nav li:hover ul {
+	float:left;
+	left: auto;
+	background-color:#009de0;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	}
+
+
+/* Sidens indhold - her artiklerne skal være*/
+.content{
+	margin-left:10px;
+	float:left;
+	width:800px;
+	height:auto;
+	min-height:200px;
+	background-color:#333;
+	border-bottom-right-radius:15px;
+	border-bottom-left-radius:15px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#009de0;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:0px;
+	padding-bottom:20px;
+	box-shadow: 0px 10px 15px #000;	
+	z-index:0;
+	}
+	
+/*Her starter Txt-box = artikkel boxe styles*/
+.txt-box{
+	width:auto;
+	height:auto;
+	min-height:100px;
+	margin:10px;
+	float:left;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#333;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#333;
+	}
+	
+/*Her starter overskrift styles i txt-box*/
+.txt-box h1{
+	width:300px;
+	height:40px;
+	float:left;
+	color:#FFF;
+	font-size:40px;
+	margin-top:30px;
+	margin-bottom:0px;
+	margin-left:20px;
+	margin-right:0px;
+	}
+
+.txt-box h2{
+	width:300px;
+	height:15px;
+	float:left;
+	margin:10px;
+	color:#FFF;
+	font-size:15px;
+	margin-bottom:0px;
+	}
+	
+/*Her starter paragraph styles i txt-box*/
+.txt-box p{
+	width:300px;
+	height:auto;
+	float:left;
+	margin:10px;
+	color:#FFF;
+	}	
+
+/*Her starter Textbox layout til galleri siderne*/	
+.txt-box-white{
+	width:750px;
+	height:auto;
+	min-height:300px;
+	margin-top:15px;
+	margin-left:15px;
+	margin-right:15px;
+	margin-bottom:0px;
+	float:left;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#333;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#333;
+	}
+
+/*Headline tag styles*/	
+.txt-box-white h2{
+	width:300px;
+	height:15px;
+	float:left;
+	margin:10px;
+	color:#333;
+	font-size:15px;
+	margin-bottom:0px;
+	}
+
+/*Paragraph tag styles*/	
+.txt-box-white p{
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	margin-right:10px;
+	color:#333;
+	}
+
+/*Her starter image thumbnails styles til galleri siderne*/	
+.txt-box-bild{
+	border-radius:10px; 
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px; 
+	}	
+
+/*Billed Link styles til galleri siderne*/	
+a.bild-link{
+	max-width:200px;
+	max-height:300px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	margin-bottom:50px;
+	margin-right:10px;
+	padding:8px;
+	background-color:#009de0;
+	border-radius:10px; 
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	}	
+
+/*Billed Link mouse over styles til galleri siderne*/		
+a.bild-link:hover{
+	max-width:200px;
+	max-height:300px;
+	float:left;
+	margin-top:8px;
+	margin-left:8px;
+	margin-bottom:50px;
+	margin-right:10px;
+	padding:8px;
+	background-color:#FC9;
+	border-radius:10px; 
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	border-top-width:2px;
+	border-top-style:solid;
+	border-top-color:#ffed00;
+	border-left-width:2px;
+	border-left-style:solid;
+	border-left-color:#ffed00;
+}
+
+/*Her starter image styles til de store billeder på blandt andet profil siderne*/
+.txt-box-bild-wrap {
+	max-width:330px;
+	float:left;
+	border-radius:10px; 
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px; 
+	margin:2px;
+	}	
+
+a.bild-wrap-link{
+	max-width:335px;
+	float:left;
+	margin-top:15px;
+	margin-left:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	padding:15px;
+	background-color:#009de0;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	}	
+	
+a.bild-wrap-link:hover{
+	max-width:335px;
+	float:left;
+	margin-top:13px;
+	margin-left:8px;
+	margin-bottom:10px;
+	margin-right:10px;
+	padding:15px;
+	background-color:#FC9;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	border-top-width:2px;
+	border-top-style:solid;
+	border-top-color:#ffed00;
+	border-left-width:2px;
+	border-left-style:solid;
+	border-left-color:#ffed00;
+}
+
+/*Her starter Textbox styles til hver stor billed siderne*/	
+	.txtbox-pic{
+	width:350px;
+	height:auto;
+	min-height:200px;
+	background-color:#009de0;
+	float:right;
+	margin-top:15px;
+	margin-bottom:30px;
+	margin-left:15px;
+	margin-right:10px;
+	padding-bottom:7px;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	}
+	
+/*Headline tag styles*/	
+.txtbox-pic h2{
+	width:300px;
+	height:15px;
+	float:left;
+	margin-top:15px;
+	margin-bottom:5px;
+	margin-left:15px;
+	margin-right:10px;
+	color:#FFF;
+	font-size:15px;
+	margin-bottom:0px;
+	}
+	
+	/*Paragraph tag styles*/	
+.txtbox-pic p{
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:15px;
+	margin-right:10px;
+	color:#FFF;
+	}
+
+/*Her starter Txt-box-small = artikkel boxe styles*/
+.txt-box-small{
+	width:200px;
+	height:auto;
+	min-height:150px;
+	background-color:#009de0;
+	float:right;
+	margin-top:10px;
+	margin-bottom:30px;
+	margin-left:15px;
+	margin-right:10px;
+	padding-bottom:10px;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border-right-width:2px;
+	border-right-style:solid;
+	border-right-color:#000;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	}
+	
+/*Her starter overskrift styles i txt-box-small*/
+.txt-box-small h2{
+	float:left;
+	margin-top:15px;
+	margin-bottom:5px;
+	margin-left:15px;
+	margin-right:10px;
+	color:#FFF;
+	font-size:15px;
+	margin-bottom:0px;
+	}
+	
+/*Her starter paragraph styles i txt-box-small*/
+.txt-box-small p{
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:15px;
+	margin-right:10px;
+	color:#FFF;
+	}
+	
+
+/*Links til sprog valg på profil sider*/
+a.outlink{
+	line-height:20px;
+	margin-top:0px;
+	margin-bottom:5px;
+	margin-left:12px;
+	margin-right:5px;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	float:left;
+	}
+	
+a.outlink:hover{
+	line-height:20px;
+	margin-top:0px;
+	margin-bottom:5px;
+	margin-left:12px;
+	margin-right:5px;
+	color:#FC9;
+	text-decoration:none;
+	display:block;
+	float:left;	
+	}
+	
+/*Her starter Sidens bottom - footer styles*/
+#bottom{
+	/*width:800px;*/
+	width: 80%;
+	height:30px;
+	float:left;
+	margin-top:20px;
+	margin-right: 10%;
+	margin-left: 10%;
+	color:#FFF;
+	}						
+	
+/****** Store bild-links til forside og lignende starter her ******/
+/*Bild-link ink start*/
+a.bild-link-ink{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/ink.png);
+}
+
+a.bild-link-ink:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/ink_text.png);
+	}
+
+/*Bild-link col start*/
+a.bild-link-col{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/color.png);
+}
+
+a.bild-link-col:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/color_text.png);
+	}
+
+/*Bild-link deg start*/
+a.bild-link-deg{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/degital.png);
+}
+
+a.bild-link-deg:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/degital_text.png);
+	}
+	
+/*Bild-link pen start*/
+a.bild-link-pen{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/pencil.png);
+}
+
+a.bild-link-pen:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/pencil_text.png);
+	}
+
+/*Bild-link pro start*/
+a.bild-link-pro{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/profil.png);
+}
+
+a.bild-link-pro:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/profil_text.png);
+	}
+	
+/*Bild-link art start*/
+a.bild-link-art{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/art.png);
+}
+
+a.bild-link-art:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/art_text.png);
+	}
+	
+/*Bild-link cases start*/
+a.bild-link-cases{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/cases.png);
+}
+
+a.bild-link-cases:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/cases_text.png);
+	}
+	
+	/*Bild-link folds start*/
+a.bild-link-folds{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/folds.png);
+}
+
+a.bild-link-folds:hover{
+	width:210px;
+	height:210px;
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	margin-bottom:15px;
+	margin-right:15px;
+	border-radius:25px; 
+	-moz-border-radius:25px; 
+	-webkit-border-radius:25px; 
+	background-image:url(grafik/buttons/folds_text.png);
+	}
