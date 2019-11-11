@@ -50,7 +50,7 @@ namespace Library_project
                 text.MyBurrowText4();
                 for (int i = 0; i < books.Count; i++)
                 {
-                    text.MyBurrowText2(this, i);                                 
+                    text.MyBurrowText2(this, i); // calls data from this library                                
                 }
                 text.MyBurrowText5(this);
             }
