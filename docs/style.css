@@ -818,16 +818,6 @@ a.bild-link-folds:hover{
 		color: white;
 	  }
 	  
-	  img.demo {
-		opacity: 0.6;
-		margin: 10px;
-	  }
-	  
-	  .active,
-	  .demo:hover {
-		opacity: 1;
-	  }
-	  
 	  img.hover-shadow {
 		transition: 0.3s;
 	  }
