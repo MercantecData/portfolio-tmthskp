@@ -51,6 +51,12 @@ function displayDate() {
   document.getElementById("demo2").innerHTML = Date();
 }
 
+//remove element on website
+function removeDate(){
+  var element = document.getElementById("demo2");
+element.parentNode.removeChild(element);
+}
+
 //change text in existing button 
 function change() // no ';' here
 {
@@ -58,6 +64,3 @@ function change() // no ';' here
     if (elem.value=="You Submited") elem.value = "Submit your stuff";
     else elem.value = "You Submited";
 }
-
-var cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("demo3").innerHTML = cars;

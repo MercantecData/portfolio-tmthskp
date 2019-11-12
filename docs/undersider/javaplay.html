@@ -10,7 +10,7 @@
 <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
 
 <!-- Dette er links til Lightbox funktionen -->
-<script src="../javascript/myscript.js""></script>
+<script src="../javascript/myscript.js"></script>
 
 </head>
 
@@ -66,20 +66,22 @@
         <article class="txt-box-2">
             
             <h1>What Can JavaScript Do?</h1>
-            <table width="400px">
-            <tr><td>&nbsp</td></tr>
-            <tr><td><p id="demo1">Change font size</p></td></tr>  
-            <tr><td>&nbsp</td></tr>       
-            <tr><td><button type="button" onclick="p_tag_resize()">Change size Click Me!</button></td></tr>
+            <table width="400px" border="1">
+            <tr><td colspan="2">&nbsp</td></tr>
+            <tr><td colspan="2"><p id="demo1">Change font size</p></td></tr>  
+            <tr><td colspan="2">&nbsp</td></tr>       
+            <tr><td colspan="2"><button type="button" onclick="p_tag_resize()">Change size!</button></td></tr>
             
             <!--add a time and date element-->
-            <tr><td><h3>Click the button to display the date.</h3></td></tr>
-            <tr><td><button onclick="displayDate()">The time is?</button></td></tr>
-            <tr><td><p id="demo2"></p></td></tr>
-            </table>
-           
-            <table>
-                <tr><td colspan="2"><p>Validate a form button submit click</p></td></tr>
+            <tr><td colspan="2"><h3>Click the button to display the date.</h3></td></tr>
+            <tr><td colspan="2"><button onclick="displayDate()">View Time and Date</button></td></tr>
+            <tr><td colspan="2"><p id="demo2"></p></td></tr>
+            
+            <!--Remove element datetime-->
+            <tr><td colspan="2"><button onclick="removeDate()">Remove Time and Date</button></td></tr>
+            
+            <!--Form with js response--> 
+            <tr><td colspan="2"><p>Validate a form button submit click</p></td></tr>
                 <form action="#">
                     <tr>
                         <td>First name:<br></td>
@@ -94,11 +96,8 @@
                     <tr>
                         <td></td><td><input onclick="change()" type="button" value="Submit your stuff" id="myButton1"></input></td>
                     </tr>
-                </form> 
-            </table>
-            
-            <table>
-                <tr><td><p id="demo3"></p></td></tr>
+                </form>
+                  
             </table>
 
        </article>     
