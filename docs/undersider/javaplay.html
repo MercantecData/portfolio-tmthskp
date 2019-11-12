@@ -68,16 +68,18 @@
             <h1>What Can JavaScript Do?</h1>
             <table width="400px">
             <tr><td>&nbsp</td></tr>
-            <tr><td><p id="demo">Change font size</p></td></tr>  
+            <tr><td><p id="demo1">Change font size</p></td></tr>  
             <tr><td>&nbsp</td></tr>       
             <tr><td><button type="button" onclick="p_tag_resize()">Change size Click Me!</button></td></tr>
             
+            <!--add a time and date element-->
             <tr><td><h3>Click the button to display the date.</h3></td></tr>
             <tr><td><button onclick="displayDate()">The time is?</button></td></tr>
             <tr><td><p id="demo2"></p></td></tr>
             </table>
+           
             <table>
-                <tr><td colspan="2"><p>Validate a form submit click</p></td></tr>
+                <tr><td colspan="2"><p>Validate a form button submit click</p></td></tr>
                 <form action="#">
                     <tr>
                         <td>First name:<br></td>
@@ -87,13 +89,19 @@
                         <td>Last name:<br></td>
                         <td><input type="text" name="lastname" value="Man"></td>
                     </tr>
+                    
+                    <!-- Change text in button-->
                     <tr>
-                        <td></td><td><button onclick="mySubmit()">Submit form</button></td>
+                        <td></td><td><input onclick="change()" type="button" value="Submit your stuff" id="myButton1"></input></td>
                     </tr>
                 </form> 
             </table>
-       </article>
-        
+            
+            <table>
+                <tr><td><p id="demo3"></p></td></tr>
+            </table>
+
+       </article>     
     </article>
        
 </div>

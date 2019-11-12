@@ -1,4 +1,4 @@
-
+/*Home made Light box for image views*/ 
 // Open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
@@ -40,14 +40,24 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+/*Small functions to play with js*/
+//change existing element in website 
 function p_tag_resize(){
-  document.getElementById('demo').style.fontSize='35px';
+  document.getElementById('demo1').style.fontSize='35px';
 }
 
+//add time and date element in website
 function displayDate() {
   document.getElementById("demo2").innerHTML = Date();
 }
 
-function mySubmit(){
-  document.write("You submitted").innerHTMl;
+//change text in existing button 
+function change() // no ';' here
+{
+    var elem = document.getElementById("myButton1");
+    if (elem.value=="You Submited") elem.value = "Submit your stuff";
+    else elem.value = "You Submited";
 }
+
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo3").innerHTML = cars;
