@@ -10,9 +10,8 @@
 <link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
 
 <!-- Dette er links til Lightbox funktionen -->
-<script src="../../lightbox/js/jquery-1.7.2.min.js"></script>
-<script src="../../lightbox/js/lightbox.js"></script>
-<link href="../../lightbox/css/lightbox.css" rel="stylesheet" />
+
+<script src="../../javascript/myscript.js"></script>
 </head>
 
 <body>
@@ -58,76 +57,83 @@
 <div class="content">
 	
     <article class="txt-box-white">
-    	
-        <table border="0"><tr><td>
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/typ_fold/typ_folder_1.png" title="A fold made to train my self in typographics page 1">
-        <img class="txt-box-bild" src="../../cases/thumbnails/typ_folder_1.png">
-        </a>
-        
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/typ_fold/typ_folder_2.png" title="A fold made to train my self in typographics page 2">
-        <img class="txt-box-bild" src="../../cases/thumbnails/typ_folder_2.png">
-        </a>
-        
-        	<article class="txt-box-small">
-            	<h2>Typographic Folds</h2>
-            	<p>
-           		This project was made to train myself and remember facts.<br><br> 
-            	
-                About typographic rules, fonts styles and usage, <br> 
-            	and when to choose one kind of font over another.<br><br>
+       <!-- Lightbox test -->  
+      <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="column">
+                <img src="../../cases/thumbnails/typ_folder_1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="../../cases/thumbnails/typ_folder_2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
                 
-                <a href="../../cases/folds/typ_fold/typ_folder.pdf" class="outlink" target="_blank">See PDF here</a>
-            	</p> 
-            </article>
-        </td></tr>
-         	
-        <tr><td>
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/cobra_fold/cobra_1_v2.png" title="A fold made for an art museum club page 1">
-        <img class="txt-box-bild" src="../../cases/thumbnails/cobra_1_v2.png">
-        </a>
-        
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/cobra_fold/cobra_2_v2.png" title="A fold made for an art museum club page 2">
-        <img class="txt-box-bild" src="../../cases/thumbnails/cobra_2_v2.png">
-        </a>
-        
-        	<article class="txt-box-small">
-            	<h2>Club Cobra Folds</h2>
-            	<p>
-           		This project was made For an Art museum<br><br> 
-            	
-                It was made to reprensent a club from the museum<br> 
-            	and it was actually a serie split in to 4 groups.<br><br>
-                
-                <a href="../../cases/folds/cobra_fold/cobra_folder_v2.pdf" class="outlink" target="_blank">See PDF here</a>
-            	</p> 
-            </article>
-        </td></tr>
-        
-        
-    	
-        <tr><td>
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/seaside_fold/seaside_1.png" title="A fold made for an English-pub page 1">
-        <img class="txt-box-bild" src="../../cases/thumbnails/seaside_1.png">
-        </a>
-        
-        <a class="bild-link"target="_self" rel="lightbox[folds]" href="../../cases/folds/seaside_fold/seaside_2.png" title="A fold made for an English-pub page 2">
-        <img class="txt-box-bild" src="../../cases/thumbnails/seaside_2.png">
-        </a>
-        
-        	<article class="txt-box-small">
-            	<h2>Seaside Folds</h2>
-            	<p>
-           		This project was made For an old pub<br><br> 
-            	
-                who wanted and English theme pared with seasides ocean theme<br> 
-            	and it was actually a serie split in to 4 groups.<br><br>
-                
-                <a href="../../cases/folds/seaside_fold/seaside_folder.pdf" class="outlink" target="_blank">See PDF here</a>
-            	</p> 
-            </article>
-      </td></tr></table>
-        
-	</article>
+            </div>
+              <article class="txt-box-small">
+                    <h2>Folds</h2>
+                    <p>
+                     Folds made by me<br><br> 
+                    
+                    These folds where made when i was a graphical designer<br> 
+                    They are fun to make but a little outdated
+                    </p> 
+                  </article>
+            <div class="column">
+                <img src="../../cases/thumbnails/cobra_1_v2.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="../../cases/thumbnails/cobra_2_v2.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+        <div class="column">
+            <img src="../../cases/thumbnails/seaside_1.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="../../cases/thumbnails/seaside_2.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="../../cases/folds/typ_fold/typ_folder_1.png" style="max-width:800px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="../../cases/folds/typ_fold/typ_folder_2.png" style="max-width:800px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="../../cases/folds/cobra_fold/cobra_1_v2.png" style="max-width:800px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="../../cases/folds/cobra_fold/cobra_2_v2.png" style="max-width:800px">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="../../cases/folds/seaside_fold/seaside_1.png" style="max-width:800px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="../../cases/folds/seaside_fold/seaside_2.png" style="max-width:800px">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+	</article><!--txt-box-white slut-->
     
     
 </div>
