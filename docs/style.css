@@ -142,6 +142,7 @@ body{
 	}
 	
 /*Her starter Txt-box = artikkel boxe styles*/
+/*Her starter Txt-box = artikkel boxe styles*/
 .txt-box{
 	width:auto;
 	height:auto;
@@ -709,6 +710,25 @@ a.bild-link-folds:hover{
 	background-image:url(grafik/buttons/folds_text.png);
 	}
 
+	.txt-box-2{
+		width:100%;
+		min-height:400px;
+		margin:10px;
+		padding-left: 20px;
+		float:left;
+		border-radius:20px; 
+		-moz-border-radius:20px; 
+		-webkit-border-radius:20px; 
+		border-right-width:2px;
+		border-right-style:solid;
+		border-right-color:#333;
+		border-bottom-width:2px;
+		border-bottom-style:solid;
+		border-bottom-color:#333;
+		background-color: #009de0;
+		}
+
+
 	/****************Lightbox test*******************/
 	.row > .column {
 		padding: 0 8px;
@@ -723,7 +743,7 @@ a.bild-link-folds:hover{
 	  /* Create four equal columns that floats next to eachother */
 	  .column {
 		float: left;
-		width: 25%;
+		/*width: 25%;*/
 	  }
 	  
 	  /* The Modal (background) */
@@ -731,19 +751,22 @@ a.bild-link-folds:hover{
 		display: none;
 		position: fixed;
 		z-index: 1;
-		padding-top: 100px;
+		padding-top: 10px;
 		left: 0;
 		top: 0;
-		width: 60%;
+		width: 80%;
 		height: auto;
 		overflow: auto;
 		background-color: black;
+		margin-right: 10%;
+		margin-left: 10%;
 	  }
 	  
 	  /* Modal Content */
 	  .modal-content {
 		position: relative;	
-		margin: 20px;
+		margin: 5%;
+		width: 80%;
 		padding: 0;
 		width: auto;
 		
@@ -819,9 +842,18 @@ a.bild-link-folds:hover{
 	  }
 	  
 	  img.hover-shadow {
+		float: left;
 		transition: 0.3s;
+		border-radius:10px; 
+		-moz-border-radius:10px; 
+		-webkit-border-radius:10px;
+		margin: 10px;
+		padding: 10px;
 	  }
 	  
 	  .hover-shadow:hover {
+		background-color: #009de0;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		margin: 10px;
+		padding: 10px;
 	  }

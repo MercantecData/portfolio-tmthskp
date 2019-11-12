@@ -39,3 +39,15 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function p_tag_resize(){
+  document.getElementById('demo').style.fontSize='35px';
+}
+
+function displayDate() {
+  document.getElementById("demo2").innerHTML = Date();
+}
+
+function mySubmit(){
+  document.write("You submitted").innerHTMl;
+}
