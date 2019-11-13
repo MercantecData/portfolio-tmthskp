@@ -392,10 +392,7 @@ a.bild-wrap-link:hover{
 /*Links til sprog valg på profil sider*/
 a.outlink{
 	line-height:20px;
-	margin-top:0px;
-	margin-bottom:5px;
-	margin-left:12px;
-	margin-right:5px;
+	margin:0px 5px 5px 12px; /*top, right, bottom, left*/
 	color:#fff;
 	text-decoration:none;
 	display:block;
