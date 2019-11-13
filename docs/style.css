@@ -401,10 +401,7 @@ a.outlink{
 	
 a.outlink:hover{
 	line-height:20px;
-	margin-top:0px;
-	margin-bottom:5px;
-	margin-left:12px;
-	margin-right:5px;
+	margin:0px 5px 5px 12px; /*top, right, bottom, left*/
 	color:#FC9;
 	text-decoration:none;
 	display:block;
@@ -417,9 +414,7 @@ a.outlink:hover{
 	width: 80%;
 	height:30px;
 	float:left;
-	margin-top:20px;
-	margin-right: 10%;
-	margin-left: 10%;
+	margin:20px 10% 0px 10%; /*top, right, bottom, left*/
 	color:#FFF;
 	}						
 	
@@ -429,10 +424,7 @@ a.bild-link-ink{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -443,10 +435,7 @@ a.bild-link-ink:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -458,10 +447,7 @@ a.bild-link-col{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -472,10 +458,7 @@ a.bild-link-col:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -487,10 +470,7 @@ a.bild-link-deg{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -501,10 +481,7 @@ a.bild-link-deg:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -516,10 +493,7 @@ a.bild-link-pen{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -530,10 +504,7 @@ a.bild-link-pen:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -545,10 +516,7 @@ a.bild-link-pro{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;	
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -559,10 +527,7 @@ a.bild-link-pro:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -574,10 +539,7 @@ a.bild-link-art{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -588,10 +550,7 @@ a.bild-link-art:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -603,10 +562,7 @@ a.bild-link-cases{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -617,10 +573,7 @@ a.bild-link-cases:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -632,10 +585,7 @@ a.bild-link-folds{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -646,10 +596,7 @@ a.bild-link-folds:hover{
 	width:210px;
 	height:210px;
 	float:left;
-	margin-top:15px;
-	margin-left:15px;
-	margin-bottom:15px;
-	margin-right:15px;
+	margin:15px;
 	border-radius:25px; 
 	-moz-border-radius:25px; 
 	-webkit-border-radius:25px; 
@@ -674,7 +621,7 @@ a.bild-link-folds:hover{
 		}
 
 
-	/****************Lightbox test*******************/
+/****************Lightbox test*******************/
 	.row > .column {
 		padding: 0 8px;
 	  }
@@ -804,60 +751,61 @@ a.bild-link-folds:hover{
 	  }
 
 /****** Grid eksempel ******/
-.item1 { 
-	grid-area: header;
-	grid-column-end: 1 / span 4; 
-}
-.item2 { 
-	grid-area: menu;
-	grid-row-end: 2 / span 3;
- }
-.item3 { grid-area: left;}
-.item4 { grid-area: main; }
-.item5 { grid-area: right; }
-.item6 { 
-	grid-area: footer; 
-    grid-column-end: 2 / span 3;
-}
-
-.grid-container {
-  display: grid;
-  grid-template:
-    'header header header header header header header header'
-    'menu left left main main main right right'
-    'menu footer footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px; 
-}
-
-.item3 p{
-	float:left;
-	font-size: 20px;
-	line-height: normal;
-	color:#FFF;
-	margin: 2px;
+	.item1 { 
+		grid-area: header;
+		grid-column-end: 1 / span 4; 
+	}
+	.item2 { 
+		grid-area: menu;
+		grid-row-end: 2 / span 3;
+	}
+	.item3 { grid-area: left;}
+	.item4 { grid-area: main; }
+	.item5 { grid-area: right; }
+	.item6 { 
+		grid-area: footer; 
+		grid-column-end: 2 / span 3;
 	}
 
-.item4 p{
-	float:left;
-	font-size: 20px;
-	line-height: normal;
-	color:#FFF;
-	margin: 2px;
+	.grid-container {
+	display: grid;
+	grid-template:
+		'header header header header header header header header'
+		'menu left left main main main right right'
+		'menu footer footer footer footer footer footer footer';
+	grid-gap: 10px;
+	background-color: #009de0;
+	padding: 10px;
 	}
-	
-.item5 p{
-	float:left;
-	font-size: 20px;
-	line-height: normal;
-	color:#FFF;
-	margin: 2px;
+
+	.grid-container > div {
+	background-color: #175772;
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px; 
 	}
+
+	.item3 p{
+		float:left;
+		font-size: 20px;
+		line-height: normal;
+		color:#FFF;
+		margin: 2px;
+		}
+
+	.item4 p{
+		float:left;
+		font-size: 20px;
+		line-height: normal;
+		color:#FFF;
+		margin: 2px;
+		}
+		
+	.item5 p{
+		float:left;
+		font-size: 20px;
+		line-height: normal;
+		color:#FFF;
+		margin: 2px;
+		}
