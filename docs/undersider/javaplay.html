@@ -71,7 +71,9 @@
             <tr><td colspan="2">&nbsp</td></tr>
             <tr><td colspan="2"><p id="demo1">Change font size</p></td></tr>  
             <tr><td colspan="2">&nbsp</td></tr>       
-            <tr><td colspan="2"><button type="button" onclick="p_tag_resize()">Change size!</button></td></tr>
+            <tr><td><button type="button" onclick="p_tag_resize()">Change size!</button></td>
+            <td></td>
+            </tr>
             
             <!--add a time and date element-->
             <tr><td colspan="2"><h3>Click the button to display the date.</h3></td></tr>
@@ -86,19 +88,29 @@
                 <form action="#">
                     <tr>
                         <td>First name:<br></td>
-                        <td><input type="text" name="firstname" value="Bat"><br></td>   
-                    </tr>
-                    <tr>
-                        <td>Last name:<br></td>
-                        <td><input type="text" name="lastname" value="Man"></td>
+                        <td><input type="text" id="myText1" name="firstname" value="Batman is tha boss"><br></td>   
                     </tr>
                     
-                    <!-- Change text in button-->
+                    <!-- Change text in button and add text to page from formular-->
                     <tr>
                         <td></td><td><input onclick="change()" type="button" value="Submit your stuff" id="myButton1"></input></td>
                     </tr>
+                    
+                    <tr><td colspan="2"><p id="demo4"></p></td></tr>
                 </form>
-                  
+                              
+                <tr><!-- Js Array -->
+                    <td> <button onclick="myArray()">See array</button>
+                    </td>
+                    <td><p id="demo3"></p>
+                    </td>
+                </tr>
+                
+                <tr><!-- Js add element to array -->
+                    <td><button onclick="addToArray()">Add Element</button></td>
+                    <!-- Js remove element from array -->
+                    <td><button onclick="removeFromArray()">Remove Element</button></td>                    
+                </tr>
             </table>
 
        </article>     

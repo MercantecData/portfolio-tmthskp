@@ -42,19 +42,22 @@ function showSlides(n) {
 
 /*Small functions to play with js*/
 //change existing element in website 
-function p_tag_resize(){
-  document.getElementById('demo1').style.fontSize='35px';
+function p_tag_resize()
+{
+  size = document.getElementById('demo1').style.fontSize='30px';
 }
 
 //add time and date element in website
-function displayDate() {
+function displayDate() 
+{
   document.getElementById("demo2").innerHTML = Date();
 }
 
 //remove element on website
-function removeDate(){
+function removeDate()
+{
   var element = document.getElementById("demo2");
-element.parentNode.removeChild(element);
+  element.parentNode.removeChild(element);
 }
 
 //change text in existing button 
@@ -63,4 +66,30 @@ function change() // no ';' here
     var elem = document.getElementById("myButton1");
     if (elem.value=="You Submited") elem.value = "Submit your stuff";
     else elem.value = "You Submited";
+    
+    //js take input from html formular and put in id for read og web page
+    var x =  
+    document.getElementById("myText1", "myText2").value; 
+    document.getElementById("demo4").innerHTML = x; 
+}
+
+//Js array
+function myArray()
+{
+  elements = ["Element1", "Element2", "Element3", "Element4"];
+  document.getElementById("demo3").innerHTML = elements;
+}
+
+//Js add element to array 
+function addToArray() 
+{
+  elements.push("Element5");
+  document.getElementById("demo3").innerHTML = elements;
+}
+
+//Js remove element from array
+function removeFromArray()
+{
+elements.pop();
+document.getElementById("demo3").innerHTML = elements;
 }
