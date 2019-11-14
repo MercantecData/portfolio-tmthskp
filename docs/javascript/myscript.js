@@ -104,3 +104,22 @@ function animation2(navn,x,y,z, w, h, p)
 {
 	$('#'+navn).animate({left: x, top: y, opacity: z, width: w, height: h, padding: p}, 300);
 }
+
+//fade in
+function komind(){
+  $("#div1").fadeIn();
+  $("#div2").fadeIn("slow");
+  $("#div3").fadeIn(2500);
+}
+
+//fade out
+function smutud(){
+  $("#div1").fadeOut();
+  $("#div2").fadeOut("slow");
+  $("#div3").fadeOut(2500);
+}
+
+//toggle slide
+function bold(){
+  $("#bold1").slideToggle();
+}

@@ -117,13 +117,13 @@
             <div id="box" style="width:600px;min-height:300px;margin-top:20px;position:relative;overflow:hidden;"> <!-- box style -->
                 <!-- html bold tag as click able-->
                 <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')" style="position:absolute; top:30px; left:350px;cursor:pointer;"><!-- Knap i grå box style Klik her samt animation på jsbox-->
-                    Klik her for flotte farver
+                    Click for pretty colors
                 </b>
                 
                 <div id="jsbox" style="width:50px;height:50px;position:absolute;background:rgba(255,0,0,1);left:500px;top:500px;"><!-- liltle box style no frame -->
                     <!-- button close jq animation inside red box-->
                     <button onClick="animation1('jsbox',500,500,1,'50px','50px'), animation1('jsbox2',500,500,1,'50px','50px'), animation1('jsbox3',500,500,1,'50px','50px'), animation1('jsbox4',500,500,1,'50px','50px')">
-                        Luk Flotte farver
+                        Close Pretty colors
                     </button>
                 </div>   
                     
@@ -145,6 +145,20 @@
                 <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')">
                     <div id="dock3" style="width:50px;height:50px;position:absolute;background:rgba(255,20,150,1);left:190px;top:480px;float:left;" onMouseOver="animation2('dock3',170,460,1, '70px','70px', '0')" onMouseOut="animation2('dock3',190,480,1, '50px','50px')"></div>
                 </b>
+            </div>
+            <!-- Jquery fade in and out-->
+            <div style="width:auto;height:auto;position:absolute;left:850px;top:240px;">
+                <button onclick="komind()">Click to fade in boxes</button>
+
+                <div id="div1" style="width:140px;height:80px;display:none;background-color:rgba(200,0,50,1);"></div>
+                <div id="div2" style="width:140px;height:80px;display:none;background-color:rgba(100,50,50,1);"></div>
+                <div id="div3" style="width:140px;height:80px;display:none;background-color:rgba(255,20,150,1);"><button onclick="smutud()">Click to fadeout</button></div>
+            </div>
+
+            <!-- ball toggle -->
+            <div style="width:auto;height:auto;position:absolute;left:850px;top:510px;">
+                <button onclick="bold()">Click for toggle the ball</button>
+                <div id="bold1" style="border-radius:100px;background:rgba(200,0,50,1);padding:20px;width:100px;height:100px;margin-top:5px;"></div>
             </div>
 
        </article>     
