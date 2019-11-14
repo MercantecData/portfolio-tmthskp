@@ -93,3 +93,14 @@ function removeFromArray()
 elements.pop();
 document.getElementById("demo3").innerHTML = elements;
 }
+
+/****** For Jquery play dpart ******/
+function animation1(navn,x,y,z, w, h)
+{
+	$('#'+navn).animate({left: x, top: y, opacity: z, width: w, height: h}, 1000);//Animation object at 1000 miliseconds = 1 sec
+}
+		
+function animation2(navn,x,y,z, w, h, p)
+{
+	$('#'+navn).animate({left: x, top: y, opacity: z, width: w, height: h, padding: p}, 300);
+}

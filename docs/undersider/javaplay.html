@@ -11,7 +11,7 @@
 
 <!-- Dette er links til Lightbox funktionen -->
 <script src="../javascript/myscript.js"></script>
-
+<script src="../javascript/jq.js"></script>
 </head>
 
 <body>
@@ -112,6 +112,40 @@
                     <td><button onclick="removeFromArray()">Remove Element</button></td>                    
                 </tr>
             </table>
+
+    <!-- Jquery play with css styling in main document-->
+            <div id="box" style="width:600px;min-height:300px;margin-top:20px;position:relative;overflow:hidden;"> <!-- box style -->
+                <!-- html bold tag as click able-->
+                <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')" style="position:absolute; top:30px; left:350px;cursor:pointer;"><!-- Knap i grå box style Klik her samt animation på jsbox-->
+                    Klik her for flotte farver
+                </b>
+                
+                <div id="jsbox" style="width:50px;height:50px;position:absolute;background:rgba(255,0,0,1);left:500px;top:500px;"><!-- liltle box style no frame -->
+                    <!-- button close jq animation inside red box-->
+                    <button onClick="animation1('jsbox',500,500,1,'50px','50px'), animation1('jsbox2',500,500,1,'50px','50px'), animation1('jsbox3',500,500,1,'50px','50px'), animation1('jsbox4',500,500,1,'50px','50px')">
+                        Luk Flotte farver
+                    </button>
+                </div>   
+                    
+                  <div id="jsbox2" style="width:50px;height:50px;position:absolute;background:rgba(200,0,50,1);left:500px;top:500px;"></div>
+                
+                <div id="jsbox3" style="width:50px;height:50px;position:absolute;background:rgba(150,50,50,1);left:500px;top:500px;"></div>
+                
+                <div id="jsbox4" style="width:50px;height:50px;position:absolute;background:rgba(255,20,150,1);left:500px;top:500px;"></div>
+            </div>
+            
+            <!-- this div contains hower color boxes -->
+            <div style="width:500px;height:auto;position:absolute;left:668px;top:240px;">
+                <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')">
+                    <div id="dock1" style="width:50px;height:50px;position:absolute;background:rgba(200,0,50,1);left:50px;top:480px;float:left;" onMouseOver="animation2('dock1',30,460,1, '70px','70px','0')" onMouseOut="animation2('dock1',50,480,1, '50px','50px')"></div>  
+                </b>
+                <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')">
+                    <div id="dock2" style="width:50px;height:50px;position:absolute;background:rgba(100,50,50,1);left:120px;top:480px;float:left;" onMouseOver="animation2('dock2',100,460,1, '70px','70px','0')" onMouseOut="animation2('dock2',120,480,1, '50px','50px')"></div>
+                </b>
+                <b onClick="animation1('jsbox',0,0,1, '150px','150px'), animation1('jsbox2',160,0,1, '150px','150px'), animation1('jsbox3',0,160,1, '150px','150px'), animation1('jsbox4',160,160,1, '150px','150px')">
+                    <div id="dock3" style="width:50px;height:50px;position:absolute;background:rgba(255,20,150,1);left:190px;top:480px;float:left;" onMouseOver="animation2('dock3',170,460,1, '70px','70px', '0')" onMouseOut="animation2('dock3',190,480,1, '50px','50px')"></div>
+                </b>
+            </div>
 
        </article>     
     </article>
