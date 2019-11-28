@@ -1,0 +1,65 @@
+CREATE TABLE Employee(
+	PersonID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FirstName Varchar(256),
+    LastName Varchar(256),
+    Email Varchar(256),
+    UserName Varchar(256),
+    UserPassword Varchar(256)
+);
+
+CREATE TABLE Department(
+	DepartmentID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Office Varchar(256),
+    ItDepartment Varchar(256),
+    Person_ID int,
+    FOREIGN KEY (Person_ID) REFERENCES Employee(PersonID)
+);
+
+CREATE TABLE Dep_Manager
+(
+	DepManagerID int(11) AUTO_INCREMENT PRIMARY KEY,
+    person_id int,
+    FOREIGN KEY (person_id) REFERENCES Employee(PersonID),
+    Department_ID int,
+    FOREIGN KEY (Department_ID) REFERENCES Department(DepartmentID)
+);
+
+CREATE TABLE Titles
+(
+    TitleID int(11) AUTO_INCREMENT PRIMARY KEY,
+    OfficePersonal Varchar(256),
+    ItPersonal Varchar(256),
+    idperson int,
+    FOREIGN KEY (idperson) REFERENCES Employee(PersonID),
+    iddepartment int,
+    FOREIGN KEY (iddepartment) REFERENCES Department(DepartmentID),
+    iddepmanager int,
+    FOREIGN KEY (iddepmanager) REFERENCES Dep_Manager(DepManagerID)
+    
+);
+
+CREATE TABLE Dep_Employee
+(
+	DepEmployeeID int(11) AUTO_INCREMENT PRIMARY KEY,
+    IDperson int,
+    FOREIGN KEY (IDperson) REFERENCES Employee(PersonID),
+    department_id int,
+    FOREIGN KEY (department_id) REFERENCES Department(DepartmentID),
+    Title_ID int,
+    FOREIGN KEY (Title_ID) REFERENCES Titles(TitleID)
+);
+
+CREATE TABLE Salaries
+(
+	SalariID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    OfficePayHour int,
+    ItPayHour int,
+    personid int,
+    FOREIGN KEY (personid) REFERENCES Employee(PersonID),
+    departmentid int,
+    FOREIGN KEY (departmentid) REFERENCES Department(DepartmentID),
+    depmanagerid int,
+    FOREIGN KEY (depmanagerid) REFERENCES Dep_Manager(DepManagerID),
+    titleid int,
+    FOREIGN KEY (titleid) REFERENCES Titles(TitleID)   
+);

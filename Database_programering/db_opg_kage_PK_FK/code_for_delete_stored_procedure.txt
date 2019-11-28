@@ -1,0 +1,15 @@
+
+DELIMITER //
+CREATE PROCEDURE delete_id(
+    IN delete_id int(11)
+)  
+       
+BEGIN 
+
+     DELETE 
+     FROM orders
+     WHERE orders.order_id = delete_id;
+
+END //
+DELIMITER ;
+
