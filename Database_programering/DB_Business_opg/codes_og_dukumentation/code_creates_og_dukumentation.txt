@@ -1,0 +1,107 @@
+//table create codes//
+CREATE TABLE Employee(
+	PersonID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FirstName Varchar(256),
+    LastName Varchar(256),
+    Email Varchar(256),
+    UserName Varchar(256),
+    UserPassword Varchar(256)
+);
+
+CREATE TABLE Department(
+	DepartmentID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    DepName Varchar(256)
+);
+
+CREATE TABLE Dep_Manager
+(
+	DepManagerID int(11) AUTO_INCREMENT PRIMARY KEY,
+    person_id int,
+    FOREIGN KEY (person_id) REFERENCES Employee(PersonID),
+    Department_ID int,
+    FOREIGN KEY (Department_ID) REFERENCES Department(DepartmentID)
+);
+
+CREATE TABLE Titles
+(
+    TitleID int(11) AUTO_INCREMENT PRIMARY KEY,
+    TitleName Varchar(256),
+    idperson int,
+    FOREIGN KEY (idperson) REFERENCES Employee(PersonID)    
+);
+
+CREATE TABLE Dep_Employee
+(
+	DepEmployeeID int(11) AUTO_INCREMENT PRIMARY KEY,
+    IDperson int,
+    FOREIGN KEY (IDperson) REFERENCES Employee(PersonID),
+    department_id int,
+    FOREIGN KEY (department_id) REFERENCES Department(DepartmentID),
+    Title_ID int,
+    FOREIGN KEY (Title_ID) REFERENCES Titles(TitleID)
+);
+
+CREATE TABLE Salaries
+(
+	SalariID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    OfficePayHour int,
+    ItPayHour int,
+    personid int,
+    FOREIGN KEY (personid) REFERENCES Employee(PersonID),
+    departmentid int,
+    FOREIGN KEY (departmentid) REFERENCES Department(DepartmentID),
+    depmanagerid int,
+    FOREIGN KEY (depmanagerid) REFERENCES Dep_Manager(DepManagerID),
+    titleid int,
+    FOREIGN KEY (titleid) REFERENCES Titles(TitleID)   
+);
+
+
+
+//Insert af employees//
+INSERT INTO `employee`(`
+PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Bob','The Rough','bob@email.mail','bob','bobbob');
+
+INSERT INTO `employee`(`PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Cub','The Cute','cub@email.mail','cub','cubcub');
+
+INSERT INTO `employee`(`PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Dan','The Drunk','dan@email.mail','dan','dandan');
+
+INSERT INTO `employee`(`PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Ben','The Brat','ben@email.mail','ben','benben');
+
+INSERT INTO `employee`(`PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Joe','The Jingle','joe@email.mail','joe','joejoe');
+
+INSERT INTO `employee`(`PersonID`, `FirstName`, `LastName`, `Email`, `UserName`, `UserPassword`) VALUES ('','Alf','The ALIEN','alf@email.mail','alf','alfalf')
+
+
+
+//view til overview//
+CREATE VIEW employe overview AS
+SELECT *
+FROM employee;
+
+
+
+//View til manager Employee of department //
+CREATE VIEW department_employes_email AS
+SELECT employee.PersonID, employee.FirstName, employee.LastName, department.DepName, employee.Email 
+FROM employee
+INNER JOIN department ON employee.PersonID=department.DepartmentID;
+
+
+//stored procedure delete emloyee//
+DELIMITER //
+CREATE PROCEDURE delete_id(
+    IN delete_id int(11)
+)  
+       
+BEGIN 
+
+     DELETE 
+     FROM employee
+     WHERE employee.PersonID = delete_id;
+
+END //
+DELIMITER ;
+
+//Execute procedure med//
+CALL delete_id([nummeret på id der skal fjernes]);
