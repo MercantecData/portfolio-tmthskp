@@ -18,17 +18,16 @@ namespace opg_evil_xmas_adventure
             
             if (randomNumber == 1)
             {
-                monsterObstacle.MonsterEncounter();
-                //Console.WriteLine("Nothing happens");
+                monsterObstacle.MonsterEncounter();           
             }
+           
             else if (randomNumber == 2)
             {
-                //monsterObstacle.MonsterEncounter();
                 Console.WriteLine("Nothing happens");
             }
+            
             else if (randomNumber == 3)
             {
-                //monsterObstacle.MonsterEncounter();
                 Console.WriteLine("You see nothing");
             }
         }        

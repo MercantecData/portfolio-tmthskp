@@ -22,18 +22,15 @@ namespace opg_evil_xmas_adventure
                     break;
 
                 case "right":
-                    //EncounterSound();
                     Console.WriteLine("\nYou walk proudly for a few minutes when suddently.");
                     obstacles.AnObstacle();
                     break;
 
                 case "turnback":
-                    //RunAwaySound();
                     Console.WriteLine("\nYou Decide that this is enough adventuring for today. \nSo you turn back and End the game");
                     Environment.Exit(0);
                     break;
                     
-
                 default:
                     Console.WriteLine("I'm sorry, I didn't understand that!");
                     TwoPaths();

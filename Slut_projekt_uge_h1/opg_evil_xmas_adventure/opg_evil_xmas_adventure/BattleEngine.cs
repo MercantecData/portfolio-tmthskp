@@ -44,7 +44,7 @@ namespace opg_evil_xmas_adventure
                         Console.WriteLine("\nYou didnt kill it. \nMonster fights back");
                         Console.ReadLine();
 
-                        //Goblin Fights Back
+                        //Monster Fights Back
                         while (IsrunningMonster)
                         {
                             Console.Write("Monster do " + enemyEncounters.MonsterDMG + " amount of dmg");

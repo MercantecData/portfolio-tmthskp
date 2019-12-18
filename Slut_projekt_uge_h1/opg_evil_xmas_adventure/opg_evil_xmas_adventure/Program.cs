@@ -9,8 +9,7 @@ namespace opg_evil_xmas_adventure
 
         /*  -------------------------- Main Code ------------------------------- */
         static void Main(string[] args)
-        {     
-            
+        {               
             TextMethods textMethods = new TextMethods();
             SwitchBoard switchBoard = new SwitchBoard();
 

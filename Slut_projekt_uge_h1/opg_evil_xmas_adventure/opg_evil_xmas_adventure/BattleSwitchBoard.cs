@@ -21,6 +21,7 @@ namespace opg_evil_xmas_adventure
             {
                 case "attack":
                 case "atk":
+                case "attk":
                     Console.WriteLine("\nYou attack");
                     battleEngine.BattleEngine_Monster(enemyEncounters);
                     break;

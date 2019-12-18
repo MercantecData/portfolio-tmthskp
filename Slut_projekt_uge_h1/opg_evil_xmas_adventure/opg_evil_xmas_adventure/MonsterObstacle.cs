@@ -11,6 +11,7 @@ namespace opg_evil_xmas_adventure
         {
             BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
             EnemyEncounters enemyEncounters = new EnemyEncounters();
+            SwitchBoard switchBoard = new SwitchBoard();
             
             bool isrunning = true;
 
@@ -29,7 +30,6 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
                     battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
-                    //battleSwitchBoard.ReindeerAttackSwitch();
                 }
                 
                 else if (Youmeet == "XmasGnome ")
@@ -39,7 +39,6 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
                     battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
-                    //battleSwitchBoard.XmasGnomeAttackSwitch();
                 }
 
                 else if (Youmeet == "XmasElf ")
@@ -50,7 +49,6 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
                     battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
-                    //battleSwitchBoard.XmasElfAttackSwitch();
                 }
                 
                 else
@@ -58,6 +56,7 @@ namespace opg_evil_xmas_adventure
                     isrunning = false;
                 }
                 Console.ReadLine();
+                switchBoard.TwoPaths();
             }
         }
     }
