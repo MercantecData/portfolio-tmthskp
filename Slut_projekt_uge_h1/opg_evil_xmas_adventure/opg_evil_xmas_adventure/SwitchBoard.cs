@@ -5,9 +5,7 @@ namespace opg_evil_xmas_adventure
 {
     class SwitchBoard
     {
-        
-       
-
+     
        public void TwoPaths() //TwoPaths Switch
        {
             Obstacles obstacles = new Obstacles();
@@ -32,7 +30,9 @@ namespace opg_evil_xmas_adventure
                 case "turnback":
                     //RunAwaySound();
                     Console.WriteLine("\nYou Decide that this is enough adventuring for today. \nSo you turn back and End the game");
+                    Environment.Exit(0);
                     break;
+                    
 
                 default:
                     Console.WriteLine("I'm sorry, I didn't understand that!");

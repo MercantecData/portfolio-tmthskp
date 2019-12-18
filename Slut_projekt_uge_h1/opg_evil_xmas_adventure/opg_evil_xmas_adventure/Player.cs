@@ -16,7 +16,6 @@ namespace opg_evil_xmas_adventure
             PlayerDMG = random.Next(2, 6) * 2;
             return true;
         }
-
-       
+     
     }
 }

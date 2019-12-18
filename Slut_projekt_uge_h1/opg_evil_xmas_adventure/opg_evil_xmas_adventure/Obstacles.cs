@@ -5,11 +5,12 @@ namespace opg_evil_xmas_adventure
 {
     class Obstacles
     {
-        MonsterObstacle monsterObstacle = new MonsterObstacle();
+        
         
        
         public void AnObstacle() // Decides what the player runs in to next
         {
+            MonsterObstacle monsterObstacle = new MonsterObstacle();
             
             Random random = new Random();
 
@@ -22,12 +23,13 @@ namespace opg_evil_xmas_adventure
             }
             else if (randomNumber == 2)
             {
-                monsterObstacle.MonsterEncounter();
+                //monsterObstacle.MonsterEncounter();
+                Console.WriteLine("Nothing happens");
             }
             else if (randomNumber == 3)
             {
-                monsterObstacle.MonsterEncounter();
-                //Console.WriteLine("You see nothing");
+                //monsterObstacle.MonsterEncounter();
+                Console.WriteLine("You see nothing");
             }
         }        
     }

@@ -7,9 +7,6 @@ namespace opg_evil_xmas_adventure
     class BattleSwitchBoard
     {
         
-        //EnemyEncounters enemyEncounters = new EnemyEncounters();
-        //MonsterObstacle monsterObstacle = new MonsterObstacle();
-
         /***************** Attack Switches ********************/
         public void MonsterAttackSwitch(EnemyEncounters enemyEncounters)
         { 

@@ -5,11 +5,13 @@ namespace opg_evil_xmas_adventure
 {
     class MonsterObstacle
     {
-        BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
-        EnemyEncounters enemyEncounters = new EnemyEncounters();
+        
         
         public void MonsterEncounter() //Array randomizer of Monster list
         {
+            BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
+            EnemyEncounters enemyEncounters = new EnemyEncounters();
+            
             bool isrunning = true;
 
             Random RandomMonster = new Random(); //Randomizer

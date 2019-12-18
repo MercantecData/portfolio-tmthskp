@@ -28,7 +28,7 @@ namespace opg_evil_xmas_adventure
         public bool XmasElf()
         {
             MonsterHP = 15;
-            MonsterDMG = random.Next(1, 6)*2;
+            MonsterDMG = random.Next(1, 6) * 2;
             return true;
         }
         

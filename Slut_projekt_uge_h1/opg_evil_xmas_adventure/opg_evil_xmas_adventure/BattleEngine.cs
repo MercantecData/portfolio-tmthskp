@@ -55,6 +55,7 @@ namespace opg_evil_xmas_adventure
                                 Console.WriteLine("\nYou are Defeated \nand lie Bleeding violently at its feet ");
                                 IsrunningPlayer = false;
                                 IsrunningMonster = false;
+                                Environment.Exit(0);
                             }
 
                             else if (player.PlayerHP == enemyEncounters.MonsterDMG) // Equal varibel 
@@ -62,6 +63,7 @@ namespace opg_evil_xmas_adventure
                                 Console.WriteLine("\nYou are Defeated ");
                                 IsrunningPlayer = false;
                                 IsrunningMonster = false;
+                                Environment.Exit(0);
                             }
 
                             else if (player.PlayerHP > enemyEncounters.MonsterDMG)
@@ -78,7 +80,5 @@ namespace opg_evil_xmas_adventure
                 }
             }
         }
-
-
     }
 }
