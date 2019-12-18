@@ -11,7 +11,8 @@ namespace opg_evil_xmas_adventure
         public void AnObstacle() // Decides what the player runs in to next
         {
             MonsterObstacle monsterObstacle = new MonsterObstacle();
-            
+            Npc npc = new Npc();
+
             Random random = new Random();
 
             int randomNumber = random.Next(1, 4);
@@ -28,7 +29,7 @@ namespace opg_evil_xmas_adventure
             
             else if (randomNumber == 3)
             {
-                Console.WriteLine("You see nothing");
+                npc.NpcEncounter();
             }
         }        
     }
