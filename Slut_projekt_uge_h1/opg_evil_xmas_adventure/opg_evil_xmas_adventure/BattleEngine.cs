@@ -5,30 +5,32 @@ namespace opg_evil_xmas_adventure
 {
     class BattleEngine
     {
-        EnemyEncounters enemyEncounters = new EnemyEncounters();
-        PlayerStats playerStats = new PlayerStats();
+        
 
-        public void BattleEngine_Monster()
+        public void BattleEngine_Monster(EnemyEncounters enemyEncounters)
         {
+            PlayerStats playerStats = new PlayerStats();
+
             bool IsrunningPlayer = true;
             while (IsrunningPlayer)
             {
                 while (IsrunningPlayer)
                 {
                     bool IsrunningMonster = true;
+                    Console.WriteLine("monster got hp: " + enemyEncounters.MonsterHP);
                     Console.Write("You do " + playerStats.PlayerDMG + " amount of dmg");
                     Console.WriteLine();
 
                     if (enemyEncounters.MonsterHP < playerStats.PlayerDMG) // Lower than varibel 
                     {
-                        //EnemyKillSound();
+                        
                         Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");
                         IsrunningPlayer = false;
                     }
 
                     if (enemyEncounters.MonsterHP == playerStats.PlayerDMG) // Equal varibel 
                     {
-                        //EnemyKillSound();
+                       
                         Console.WriteLine("\nThe Monster dies ");
                         IsrunningPlayer = false;
                     }
@@ -64,7 +66,7 @@ namespace opg_evil_xmas_adventure
                             else if (playerStats.PlayerHP > enemyEncounters.MonsterDMG)
                             {
                                 playerStats.PlayerHP = (playerStats.PlayerHP - enemyEncounters.MonsterDMG);
-                                //AttackSound();
+                                
                                 Console.WriteLine("You have " + playerStats.PlayerHP + " Hp left");
                                 Console.WriteLine("\nIt didnt kill you. \nFight back");
                                 Console.ReadLine();

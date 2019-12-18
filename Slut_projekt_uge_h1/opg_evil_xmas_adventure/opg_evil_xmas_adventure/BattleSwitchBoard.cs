@@ -6,13 +6,17 @@ namespace opg_evil_xmas_adventure
 {
     class BattleSwitchBoard
     {
-        BattleEngine battleEngine = new BattleEngine();
-
+        
+        //EnemyEncounters enemyEncounters = new EnemyEncounters();
+        //MonsterObstacle monsterObstacle = new MonsterObstacle();
 
         /***************** Attack Switches ********************/
-        public void MonsterAttackSwitch()
-        {
+        public void MonsterAttackSwitch(EnemyEncounters enemyEncounters)
+        { 
+            BattleEngine battleEngine = new BattleEngine();  
+            
             Console.WriteLine("The Monster Looks at you with a mean gaze");
+            Console.WriteLine("monster got hp: " + enemyEncounters.MonsterHP);
             Console.WriteLine("\nAttack? \nRunaway");
 
             string userResponse = Console.ReadLine();
@@ -21,12 +25,11 @@ namespace opg_evil_xmas_adventure
                 case "attack":
                 case "atk":
                     Console.WriteLine("\nYou attack");
-                    battleEngine.BattleEngine_Monster();
+                    battleEngine.BattleEngine_Monster(enemyEncounters);
                     break;
 
                 case "runaway":
                 case "run":
-                    //RunAwaySound();
                     Console.WriteLine("You Run away");
                     Console.WriteLine("But You wont get far");
                     Console.WriteLine("");
@@ -36,107 +39,10 @@ namespace opg_evil_xmas_adventure
 
                 default:
                     Console.WriteLine("Sorry didn't understand that");
-                    MonsterAttackSwitch();
+                    MonsterAttackSwitch(enemyEncounters);
                     break;
             }
         }
-
-
-        /*
-        public void ReindeerAttackSwitch()
-        {   
-            Console.WriteLine("The Adult Reindeer Looks at you with a mean gaze");
-            Console.WriteLine("\nAttack? \nRunaway");
-
-            string userResponse = Console.ReadLine();
-            switch (userResponse.ToLower())
-            {
-                case "attack":
-                case "atk":
-                    Console.WriteLine("\nYou attack");
-                    battleEngine.BattleEngine_Reindeer();
-                    break;
-
-                case "runaway":
-                case "run":
-                    //RunAwaySound();
-                    Console.WriteLine("You Run away");
-                    Console.WriteLine("But You wont get far");
-                    Console.WriteLine("");
-                    SwitchBoard switchBoard = new SwitchBoard();
-                    switchBoard.TwoPaths();
-                    break;
-
-                default:
-                    Console.WriteLine("Sorry didn't understand that");
-                    ReindeerAttackSwitch();
-                    break;
-            }
-        }
-
-         
-         public void XmasGnomeAttackSwitch()
-         {
-             Console.WriteLine("\nAttack? \nRunaway");
-
-             string userResponse = Console.ReadLine();
-             switch (userResponse.ToLower())
-             {
-                 case "attack":
-                 case "atk":
-                     Console.WriteLine("\nYou attack");
-                     battleEngine.BattleEngine_XmasGnome();
-                     break;
-
-                 case "runaway":
-                 case "run":
-                     //RunAwaySound();
-                     Console.WriteLine("You Run away");
-                     Console.WriteLine("But You wont get far");
-                     Console.WriteLine("");
-                    SwitchBoard switchBoard = new SwitchBoard();
-                    switchBoard.TwoPaths();
-                    break;
-
-                 default:
-                     Console.WriteLine("Sorry didn't understand that");
-                     //XmasGnomeAttackSwitch();
-                     break;
-             }
-         }
-
-         public void XmasElfAttackSwitch()
-         {
-             Console.WriteLine("\nAttack? \nRunaway");
-
-             string userResponse = Console.ReadLine();
-             switch (userResponse.ToLower())
-             {
-                 case "attack":
-                 case "atk":
-                     Console.WriteLine("\nYou attack");
-                     battleEngine.BattleEngine_XmasElf();
-                     break;
-
-                 case "runaway":
-                 case "run":
-                     //RunAwaySound();
-                     Console.WriteLine("You Run away");
-                     Console.WriteLine("But You wont get far");
-                     Console.WriteLine("");
-                    SwitchBoard switchBoard = new SwitchBoard();
-                    switchBoard.TwoPaths();
-                    break;
-
-                 default:
-                     Console.WriteLine("Sorry didn't understand that");
-                    // XmasElfAttackSwitch();
-                     break;
-             }
-         }
-         */
-
-
 
     }
 }

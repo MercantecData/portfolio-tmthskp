@@ -6,7 +6,8 @@ namespace opg_evil_xmas_adventure
     class MonsterObstacle
     {
         BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
-
+        EnemyEncounters enemyEncounters = new EnemyEncounters();
+        
         public void MonsterEncounter() //Array randomizer of Monster list
         {
             bool isrunning = true;
@@ -22,21 +23,31 @@ namespace opg_evil_xmas_adventure
                 if (Youmeet == "AdultReindeer ")
                 {
                     Console.WriteLine("\nYou Encounter an Adult Reindeer");
-                    battleSwitchBoard.MonsterAttackSwitch();
+                    enemyEncounters.AdultReindeer();
+                    Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
+                    Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
                     //battleSwitchBoard.ReindeerAttackSwitch();
                 }
                 
                 else if (Youmeet == "XmasGnome ")
                 {
                     Console.WriteLine("\nYou encounter a Xmas Gnome");
-                    battleSwitchBoard.MonsterAttackSwitch();
+                    enemyEncounters.XmasGnome();
+                    Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
+                    Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
                     //battleSwitchBoard.XmasGnomeAttackSwitch();
                 }
 
                 else if (Youmeet == "XmasElf ")
                 {
+                    enemyEncounters.AdultReindeer();
                     Console.WriteLine("\nYou encounter a Xmas Elf");
-                    battleSwitchBoard.MonsterAttackSwitch();
+                    enemyEncounters.XmasGnome();
+                    Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
+                    Console.WriteLine("DMG: " + enemyEncounters.MonsterDMG);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
                     //battleSwitchBoard.XmasElfAttackSwitch();
                 }
                 

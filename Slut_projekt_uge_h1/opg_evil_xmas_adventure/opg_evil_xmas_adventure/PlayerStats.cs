@@ -8,7 +8,7 @@ namespace opg_evil_xmas_adventure
         static Random random = new Random(); //number randomizer
 
         public int PlayerHP = 30;
-        public int PlayerDMG = random.Next(1, 6)*2;
+        public int PlayerDMG = random.Next(2, 6) * 2;
 
        
     }

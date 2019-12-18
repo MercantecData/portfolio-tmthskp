@@ -29,9 +29,6 @@ namespace opg_evil_xmas_adventure
                 monsterObstacle.MonsterEncounter();
                 //Console.WriteLine("You see nothing");
             }
-        }
-
-
-        
+        }        
     }
 }

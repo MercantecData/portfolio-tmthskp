@@ -5,11 +5,13 @@ namespace opg_evil_xmas_adventure
 {
     class SwitchBoard
     {
-        Obstacles obstacles = new Obstacles();
+        
        
 
        public void TwoPaths() //TwoPaths Switch
        {
+            Obstacles obstacles = new Obstacles();
+            
             Console.WriteLine("\nAs you look down the forrest walkway. \nHidden in the middle of the thick trees you notice two paths that you can choose from");
             Console.WriteLine("\nDo you take the path to the right? \nOr The Path to the left? \nMaybe you wanna turnback and end your adventuring days right there?");
             Console.WriteLine("\nLeft? \nRight? \nTurnback?");
@@ -38,6 +40,5 @@ namespace opg_evil_xmas_adventure
                     break;
             }           
        }
-
     }
 }

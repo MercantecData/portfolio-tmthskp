@@ -7,8 +7,7 @@ namespace opg_evil_xmas_adventure
     {
         public int MonsterHP;
         public int MonsterDMG;
-
-
+        
         Random random = new Random(); //number randomizer
       
         /*****************Monster Stats*********************/

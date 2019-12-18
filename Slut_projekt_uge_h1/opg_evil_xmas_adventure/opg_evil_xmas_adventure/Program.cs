@@ -26,8 +26,7 @@ namespace opg_evil_xmas_adventure
             //AfterVictory Method
             //Console.WriteLine(textMethods.AfterVictory());
             }
-
-            
+          
         }
 
 
