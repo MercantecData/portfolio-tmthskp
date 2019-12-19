@@ -13,6 +13,9 @@ namespace opg_evil_xmas_adventure
             TextMethods textMethods = new TextMethods();
             SwitchBoard switchBoard = new SwitchBoard();
 
+            //GameTitle
+            textMethods.GameTitle();
+
             //StartGameText Method            
             Console.WriteLine(textMethods.StartGameText());
             Console.WriteLine("");

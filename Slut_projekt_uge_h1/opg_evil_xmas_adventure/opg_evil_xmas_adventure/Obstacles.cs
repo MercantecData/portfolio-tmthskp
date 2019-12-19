@@ -24,7 +24,9 @@ namespace opg_evil_xmas_adventure
            
             else if (randomNumber == 2)
             {
-                Console.WriteLine("Nothing happens");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Nothing happens... \nBut you do feel a nice cool breeze \ncoming from down the road");
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
             
             else if (randomNumber == 3)

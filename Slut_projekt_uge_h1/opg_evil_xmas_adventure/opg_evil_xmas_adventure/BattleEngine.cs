@@ -10,6 +10,8 @@ namespace opg_evil_xmas_adventure
         public void BattleEngine_Monster(EnemyEncounters enemyEncounters)
         {
             Player player = new Player();
+            Reward reward = new Reward();
+
             player.PlayerStats();
 
             bool IsrunningPlayer = true;
@@ -24,15 +26,19 @@ namespace opg_evil_xmas_adventure
 
                     if (enemyEncounters.MonsterHP < player.PlayerDMG) // Lower than varibel 
                     {
-                        
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        reward.GoldLoot(player);                     
                         IsrunningPlayer = false;
                     }
 
                     if (enemyEncounters.MonsterHP == player.PlayerDMG) // Equal varibel 
                     {
-                       
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         Console.WriteLine("\nThe Monster dies ");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        reward.GoldLoot(player);                       
                         IsrunningPlayer = false;
                     }
 
@@ -52,17 +58,21 @@ namespace opg_evil_xmas_adventure
 
                             if (player.PlayerHP < enemyEncounters.MonsterDMG) // Lower than varibel 
                             {
+                                Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("\nYou are Defeated \nand lie Bleeding violently at its feet ");
                                 IsrunningPlayer = false;
                                 IsrunningMonster = false;
+                                Console.ForegroundColor = ConsoleColor.Gray;
                                 Environment.Exit(0);
                             }
 
                             else if (player.PlayerHP == enemyEncounters.MonsterDMG) // Equal varibel 
                             {
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("\nYou are Defeated ");
                                 IsrunningPlayer = false;
                                 IsrunningMonster = false;
+                                Console.ForegroundColor = ConsoleColor.Gray;
                                 Environment.Exit(0);
                             }
 

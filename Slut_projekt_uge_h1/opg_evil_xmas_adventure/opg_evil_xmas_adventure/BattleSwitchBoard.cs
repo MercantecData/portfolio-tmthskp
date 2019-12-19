@@ -14,7 +14,9 @@ namespace opg_evil_xmas_adventure
             
             Console.WriteLine("The Monster Looks at you with a mean gaze");
             Console.WriteLine("monster got hp: " + enemyEncounters.MonsterHP);
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\nAttack? \nRunaway");
+            Console.ForegroundColor = ConsoleColor.Gray;
 
             string userResponse = Console.ReadLine();
             switch (userResponse.ToLower())
@@ -22,12 +24,15 @@ namespace opg_evil_xmas_adventure
                 case "attack":
                 case "atk":
                 case "attk":
+                case "atck":
+                case "a":
                     Console.WriteLine("\nYou attack");
                     battleEngine.BattleEngine_Monster(enemyEncounters);
                     break;
 
                 case "runaway":
                 case "run":
+                case "r":
                     Console.WriteLine("You Run away");
                     Console.WriteLine("But You wont get far");
                     Console.WriteLine("");
