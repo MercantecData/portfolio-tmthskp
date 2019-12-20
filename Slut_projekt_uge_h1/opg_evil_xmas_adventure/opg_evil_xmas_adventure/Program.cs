@@ -26,7 +26,7 @@ namespace opg_evil_xmas_adventure
                 //TwoPaths Function
                 switchBoard.TwoPaths();
 
-                //AfterVictory Method
+                //Continue On Method
                 Console.WriteLine(textMethods.ContinueOn());
             }
         }

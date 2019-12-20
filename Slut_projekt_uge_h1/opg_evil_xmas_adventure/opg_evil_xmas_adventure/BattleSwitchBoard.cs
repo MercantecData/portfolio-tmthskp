@@ -8,7 +8,7 @@ namespace opg_evil_xmas_adventure
     {
         
         /***************** Attack Switc ********************/
-        public void MonsterAttackSwitch(EnemyEncounters enemyEncounters)
+        public void MonsterAttackSwitch(EnemyEncounters enemyEncounters)//Parametere til at føre data vidre
         { 
             BattleEngine battleEngine = new BattleEngine();  
             
@@ -46,6 +46,5 @@ namespace opg_evil_xmas_adventure
                     break;
             }
         }
-
     }
 }

@@ -36,6 +36,7 @@ namespace opg_evil_xmas_adventure
 
                 case "view stats":
                 case "stats":
+                case "s":
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     player.PlayerStats();
                     Console.WriteLine("Current Stats");
@@ -46,6 +47,8 @@ namespace opg_evil_xmas_adventure
 
                 case "turnback":
                 case "back":
+                case "b":
+                case "t":
                     Console.WriteLine("\nYou Decide that this is enough adventuring in this forsaken winter cold for today. \nSo you turn back and End the game");
                     Environment.Exit(0);
                     break;

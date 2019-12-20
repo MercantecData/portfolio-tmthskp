@@ -7,7 +7,7 @@ namespace opg_evil_xmas_adventure
     {
 
         /****** Battle Engine der skal styrer alle fights ******/
-        public void BattleEngine_Monster(EnemyEncounters enemyEncounters)
+        public void BattleEngine_Monster(EnemyEncounters enemyEncounters)//Parametere til at føre data vidre
         {
             Player player = new Player();
             Reward reward = new Reward();
