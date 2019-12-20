@@ -7,7 +7,7 @@ namespace opg_evil_xmas_adventure
     class BattleSwitchBoard
     {
         
-        /***************** Attack Switches ********************/
+        /***************** Attack Switc ********************/
         public void MonsterAttackSwitch(EnemyEncounters enemyEncounters)
         { 
             BattleEngine battleEngine = new BattleEngine();  

@@ -5,6 +5,7 @@ namespace opg_evil_xmas_adventure
 {
     class EnemyEncounters
     {
+        /***** Global monster stats variabler *****/
         public int MonsterHP;
         public int MonsterDMG;
         

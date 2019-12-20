@@ -5,8 +5,9 @@ namespace opg_evil_xmas_adventure
 {
     class SwitchBoard
     {
-     
-       public void TwoPaths() //TwoPaths Switch
+        
+        /****** TwoPaths Switch ******/
+       public void TwoPaths()
        {
             Obstacles obstacles = new Obstacles();
             Player player = new Player();
@@ -18,11 +19,12 @@ namespace opg_evil_xmas_adventure
             Console.WriteLine("Left? \nRight? \nView your stats(stats) \nTurnback?");
             Console.ForegroundColor = ConsoleColor.Gray;
             string userResponse = Console.ReadLine();
+            
             switch (userResponse.ToLower())
             {
                 case "left":
                 case "l":
-                    Console.WriteLine("\nA True Hero always Turn Right first \n but then again who ever said you are a Hero... \n you take the left path");
+                    Console.WriteLine("\nA True Hero always Turn Right first \nbut then again who ever said you are a Hero... \nyou take the left path");
                     obstacles.AnObstacle();
                     break;
 

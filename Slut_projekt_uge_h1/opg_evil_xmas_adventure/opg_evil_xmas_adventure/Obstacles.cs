@@ -7,8 +7,8 @@ namespace opg_evil_xmas_adventure
     {
         
         
-       
-        public void AnObstacle() // Decides what the player runs in to next
+       /****** Encounter randomizer hvad møder playeren næste ******/
+        public void AnObstacle()
         {
             MonsterObstacle monsterObstacle = new MonsterObstacle();
             Npc npc = new Npc();

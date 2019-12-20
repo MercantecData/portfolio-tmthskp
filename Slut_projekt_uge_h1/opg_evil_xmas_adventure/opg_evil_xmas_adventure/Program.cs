@@ -21,16 +21,15 @@ namespace opg_evil_xmas_adventure
             Console.WriteLine("");
 
             bool gameloop = true;
-            while(gameloop){ 
-            //TwoPaths Function
-            switchBoard.TwoPaths();
+            while(gameloop)
+            { 
+                //TwoPaths Function
+                switchBoard.TwoPaths();
 
-            //AfterVictory Method
-            //Console.WriteLine(textMethods.AfterVictory());
+                //AfterVictory Method
+                Console.WriteLine(textMethods.ContinueOn());
             }
-          
         }
-
 
     }
 }

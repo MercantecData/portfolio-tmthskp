@@ -6,6 +6,7 @@ namespace opg_evil_xmas_adventure
 {
     class Npc
     {
+        /****** Npc encounters for dialogue muligheder ******/
        public void NpcEncounter() 
        {
             SwitchBoard switchBoard = new SwitchBoard();
@@ -40,7 +41,7 @@ namespace opg_evil_xmas_adventure
                     dialogueOptions3();
                     break;
 
-                case 4:
+                case 4://Healer som jule gave selvfølgelig med 24 som amount heal i forhold til tema
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("\nMerry Xmas!");
                     Console.WriteLine("Here have a present from me to you in these Xmas times");
@@ -63,7 +64,7 @@ namespace opg_evil_xmas_adventure
        }
 
         /*****************Dialogue Options******************/
-        static void dialogueOptions1()
+        public void dialogueOptions1()
         {
             SwitchBoard switchBoard = new SwitchBoard();
             Console.WriteLine("\nWhat do you say? ");
@@ -94,7 +95,7 @@ namespace opg_evil_xmas_adventure
             switchBoard.TwoPaths();
         }
 
-        static void dialogueOptions2()
+        public void dialogueOptions2()
         {
             SwitchBoard switchBoard = new SwitchBoard();
             Console.WriteLine("\nWhat do you say? ");
@@ -125,7 +126,7 @@ namespace opg_evil_xmas_adventure
             switchBoard.TwoPaths();
         }
 
-        static void dialogueOptions3()
+        public void dialogueOptions3()
         {
             SwitchBoard switchBoard = new SwitchBoard();
             Console.WriteLine("\nWhat do you say?");

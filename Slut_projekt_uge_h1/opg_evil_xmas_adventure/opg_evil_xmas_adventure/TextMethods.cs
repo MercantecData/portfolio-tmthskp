@@ -29,9 +29,9 @@ namespace opg_evil_xmas_adventure
             return startGameText;
         }
 
-        public string AfterVictory()
+        public string ContinueOn()
         {
-            string afterVictory = "\nNow after your victory, feeling like The strongest adventure in world. \nYou decide to continue on in your adventure";
+            string afterVictory = "\nYou continue on your adventure i santas forrest";
             return afterVictory;
 
         }

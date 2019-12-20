@@ -6,8 +6,8 @@ namespace opg_evil_xmas_adventure
     class MonsterObstacle
     {
         
-        
-        public void MonsterEncounter() //Array randomizer of Monster list
+        /****** Array randomizer af Monster liste ******/
+        public void MonsterEncounter() 
         {
             BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
             EnemyEncounters enemyEncounters = new EnemyEncounters();

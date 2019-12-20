@@ -6,7 +6,7 @@ namespace opg_evil_xmas_adventure
     class BattleEngine
     {
 
-
+        /****** Battle Engine der skal styrer alle fights ******/
         public void BattleEngine_Monster(EnemyEncounters enemyEncounters)
         {
             Player player = new Player();
@@ -63,7 +63,7 @@ namespace opg_evil_xmas_adventure
                                 IsrunningPlayer = false;
                                 IsrunningMonster = false;
                                 Console.ForegroundColor = ConsoleColor.Gray;
-                                Environment.Exit(0);
+                                Environment.Exit(0);// lukker console
                             }
 
                             else if (player.PlayerHP == enemyEncounters.MonsterDMG) // Equal varibel 

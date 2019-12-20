@@ -5,6 +5,7 @@ namespace opg_evil_xmas_adventure
 {
     class Player
     {
+        /***** Global Stats variabler ******/
         public int PlayerHP;
         public int PlayerDMG;
         public int PlayerGold;
