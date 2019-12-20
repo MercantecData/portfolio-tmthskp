@@ -41,7 +41,6 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("Current Stats");
                     Console.WriteLine("Your Hp amount is: " + player.PlayerHP);
                     Console.WriteLine("Your DMG capability is: " + player.PlayerDMG + "(base 1D6*2)");
-                    Console.WriteLine("Your Gold Value is: " + player.PlayerGold);
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;
 

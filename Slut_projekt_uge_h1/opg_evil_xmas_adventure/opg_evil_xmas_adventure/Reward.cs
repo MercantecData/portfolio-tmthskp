@@ -10,8 +10,6 @@ namespace opg_evil_xmas_adventure
         public void GoldLoot(Player player)
         {
             SwitchBoard switchBoard = new SwitchBoard();
-
-
             Random Randomizer = new Random();
 
             int[] GoldPieces = { 3, 6, 9, 12, 15, 18, 21 };
@@ -21,7 +19,7 @@ namespace opg_evil_xmas_adventure
             player.PlayerGold += GoldPieces[GoldIndex];
             
             Console.WriteLine("Your Current Gold is now: " + player.PlayerGold);
-          
+            Console.ForegroundColor = ConsoleColor.Gray;
             switchBoard.TwoPaths();
 
         }

@@ -31,7 +31,7 @@ namespace opg_evil_xmas_adventure
 
         public string ContinueOn()
         {
-            string afterVictory = "\nYou continue on your adventure i santas forrest";
+            string afterVictory = "\nYou continue on your adventure in Santas forrest";
             return afterVictory;
 
         }

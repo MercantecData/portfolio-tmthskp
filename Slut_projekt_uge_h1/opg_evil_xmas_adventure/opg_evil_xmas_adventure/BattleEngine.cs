@@ -27,18 +27,18 @@ namespace opg_evil_xmas_adventure
                     if (enemyEncounters.MonsterHP < player.PlayerDMG) // Lower than varibel 
                     {
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");
+                        Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");                       
+                        reward.GoldLoot(player);
                         Console.ForegroundColor = ConsoleColor.Gray;
-                        reward.GoldLoot(player);                     
                         IsrunningPlayer = false;
                     }
 
                     if (enemyEncounters.MonsterHP == player.PlayerDMG) // Equal varibel 
                     {
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        Console.WriteLine("\nThe Monster dies ");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        reward.GoldLoot(player);                       
+                        Console.WriteLine("\nThe Monster dies ");                        
+                        reward.GoldLoot(player);
+                        Console.ForegroundColor = ConsoleColor.Gray;                       
                         IsrunningPlayer = false;
                     }
 

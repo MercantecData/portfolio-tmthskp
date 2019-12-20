@@ -14,8 +14,8 @@ namespace opg_evil_xmas_adventure
     
         public bool PlayerStats() 
         {
-            PlayerHP = 30;
-            PlayerDMG = random.Next(2, 6) * 2;
+            PlayerHP = 24;
+            PlayerDMG = random.Next(1, 6) * 2;
             PlayerGold = 12;
             return true;
         }
