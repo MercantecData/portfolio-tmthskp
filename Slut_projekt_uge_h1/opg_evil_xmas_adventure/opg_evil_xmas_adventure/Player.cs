@@ -1,24 +1,26 @@
 ﻿using System;
 
 
+
+
 namespace opg_evil_xmas_adventure
 {
     class Player
     {
-        /***** Global Stats variabler ******/
+
+        /***** Global Stats variabler ******/        
         public int PlayerHP;
         public int PlayerDMG;
         public int PlayerGold;
-        
-        Random random = new Random(); //number randomizer
     
-        public bool PlayerStats() 
+       public void PlayerStats() 
         {
-            PlayerHP = 24;
-            PlayerDMG = random.Next(1, 6) * 2;
-            PlayerGold = 12;
-            return true;
+            PlayerHP = 25;
+            PlayerDMG = 4;
+            PlayerGold = 12;        
+            /*Console.WriteLine(PlayerHP);
+            Console.WriteLine(PlayerDMG);
+            Console.WriteLine(PlayerGold); */
         }
-     
     }
 }

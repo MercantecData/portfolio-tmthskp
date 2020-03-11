@@ -5,30 +5,27 @@ namespace opg_evil_xmas_adventure
 {
     class BattleEngine
     {
-
+          
         /****** Battle Engine der skal styrer alle fights ******/
-        public void BattleEngine_Monster(EnemyEncounters enemyEncounters)//Parametere til at føre data vidre
+        public void BattleEngine_Monster(EnemyEncounters enemyEncounters, Player player, Reward reward, Obstacles obstacles, SwitchBoard switchBoard, MonsterObstacle monsterObstacle, BattleSwitchBoard battleSwitchBoard, BattleEngine battleEngine, SoundFx soundFx)//Parametere til at føre data vidre
         {
-            Player player = new Player();
-            Reward reward = new Reward();
-
-            player.PlayerStats();
-
+           
             bool IsrunningPlayer = true;
-            while (IsrunningPlayer)
-            {
+           
                 while (IsrunningPlayer)
                 {
                     bool IsrunningMonster = true;
                     Console.WriteLine("monster got hp: " + enemyEncounters.MonsterHP);
+                    soundFx.AttackSound();
                     Console.Write("You do " + player.PlayerDMG + " amount of dmg");
                     Console.WriteLine();
 
                     if (enemyEncounters.MonsterHP < player.PlayerDMG) // Lower than varibel 
                     {
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");                       
-                        reward.GoldLoot(player);
+                        Console.WriteLine("\nThe Monster lies Bleeding violently at your feet ");
+                        soundFx.EnemyKillSound();
+                        reward.GoldLoot(player, switchBoard, obstacles, monsterObstacle, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                         Console.ForegroundColor = ConsoleColor.Gray;
                         IsrunningPlayer = false;
                     }
@@ -36,23 +33,26 @@ namespace opg_evil_xmas_adventure
                     if (enemyEncounters.MonsterHP == player.PlayerDMG) // Equal varibel 
                     {
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        Console.WriteLine("\nThe Monster dies ");                        
-                        reward.GoldLoot(player);
+                        Console.WriteLine("\nThe Monster dies ");
+                        soundFx.EnemyKillSound();
+                        reward.GoldLoot(player, switchBoard, obstacles, monsterObstacle, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                         Console.ForegroundColor = ConsoleColor.Gray;                       
                         IsrunningPlayer = false;
                     }
 
                     else if (enemyEncounters.MonsterHP > player.PlayerDMG) // higher than varibel
                     {
-                        enemyEncounters.MonsterHP = (enemyEncounters.MonsterHP - player.PlayerDMG);
-
+                        enemyEncounters.MonsterHP -= player.PlayerDMG;                        
                         Console.WriteLine("Monster has " + enemyEncounters.MonsterHP + " Hp left");
-                        Console.WriteLine("\nYou didnt kill it. \nMonster fights back");
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        Console.WriteLine("You didnt kill it. \nMonster fights back");
                         Console.ReadLine();
+                        Console.ForegroundColor = ConsoleColor.Gray;
 
                         //Monster Fights Back
                         while (IsrunningMonster)
                         {
+                            soundFx.EnemyAttackSound();
                             Console.Write("Monster do " + enemyEncounters.MonsterDMG + " amount of dmg");
                             Console.WriteLine();
 
@@ -78,17 +78,20 @@ namespace opg_evil_xmas_adventure
 
                             else if (player.PlayerHP > enemyEncounters.MonsterDMG)
                             {
-                                player.PlayerHP = (player.PlayerHP - enemyEncounters.MonsterDMG);
+                                player.PlayerHP -= enemyEncounters.MonsterDMG;
                                 
                                 Console.WriteLine("You have " + player.PlayerHP + " Hp left");
-                                Console.WriteLine("\nIt didnt kill you. \nFight back");
-                                Console.ReadLine();
+                                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                                Console.WriteLine("It didnt kill you. \nFight back");
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                Console.ReadLine();                                
                                 IsrunningMonster = false;
+                                
                             }
                         }
                     }
                 }
-            }
+           
         }
     }
 }

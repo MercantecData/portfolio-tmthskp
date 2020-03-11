@@ -7,12 +7,10 @@ namespace opg_evil_xmas_adventure
     class Npc
     {
         /****** Npc encounters for dialogue muligheder ******/
-       public void NpcEncounter() 
+       public void NpcEncounter(MonsterObstacle monsterObstacle, SwitchBoard switchBoard, Obstacles obstacles, Player player, Reward reward, BattleSwitchBoard battleSwitchBoard, EnemyEncounters enemyEncounters, BattleEngine battleEngine, SoundFx soundFx) 
        {
-            SwitchBoard switchBoard = new SwitchBoard();
-            Player player = new Player();
-            Random random = new Random();
-            
+           
+            Random random = new Random();         
             int randomNumber = random.Next(1, 5);
 
             switch (randomNumber)
@@ -22,7 +20,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("\n'Hello' the person said");
                     Console.WriteLine("Be wary on the Road here adventurer. \nSeveral nasty looking Xmas creatures are seen roaming around");
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    dialogueOptions1();
+                    dialogueOptions1(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                     break;
 
                 case 2:
@@ -30,7 +28,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("\n'Hi' the person said");
                     Console.WriteLine("Take care on the road friend. \nThe Road is slippery in this weather \nand Santas little helpers are messing around");
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    dialogueOptions2();
+                    dialogueOptions2(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                     break;
 
                 case 3:
@@ -38,7 +36,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("\n'Sup' the person said");
                     Console.WriteLine("Carefull not to slip in the corpse of that gnome back there as i did");
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    dialogueOptions3();
+                    dialogueOptions3(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                     break;
 
                 case 4://Healer som jule gave selvfølgelig med 24 som amount heal i forhold til tema
@@ -49,7 +47,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP has been restored and boosted. You gained 24 HP!");
                     player.PlayerHP += 24;
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    switchBoard.TwoPaths();
+                    switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                     break;
 
                 default:
@@ -58,15 +56,15 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("He says with a very confused look on his face");
                     Console.WriteLine("He doesn't seem to notice you as he walks past you...");
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    switchBoard.TwoPaths();
+                    switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
                     break;
             }
        }
 
         /*****************Dialogue Options******************/
-        public void dialogueOptions1()
+        public void dialogueOptions1(MonsterObstacle monsterObstacle, SwitchBoard switchBoard, Obstacles obstacles, Player player, Reward reward, BattleSwitchBoard battleSwitchBoard, EnemyEncounters enemyEncounters, BattleEngine battleEngine, SoundFx soundFx)
         {
-            SwitchBoard switchBoard = new SwitchBoard();
+           
             Console.WriteLine("\nWhat do you say? ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("1. Thank you friend \n2. Mind your own business");
@@ -92,12 +90,12 @@ namespace opg_evil_xmas_adventure
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;
             }           
-            switchBoard.TwoPaths();
+            switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
         }
 
-        public void dialogueOptions2()
+        public void dialogueOptions2(MonsterObstacle monsterObstacle, SwitchBoard switchBoard, Obstacles obstacles, Player player, Reward reward, BattleSwitchBoard battleSwitchBoard, EnemyEncounters enemyEncounters, BattleEngine battleEngine, SoundFx soundFx)
         {
-            SwitchBoard switchBoard = new SwitchBoard();
+            
             Console.WriteLine("\nWhat do you say? ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("1. Thank you for the warning Friend... \n2. Hmph I dont need care im invinsible");
@@ -123,12 +121,12 @@ namespace opg_evil_xmas_adventure
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;
             }
-            switchBoard.TwoPaths();
+            switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
         }
 
-        public void dialogueOptions3()
+        public void dialogueOptions3(MonsterObstacle monsterObstacle, SwitchBoard switchBoard, Obstacles obstacles, Player player, Reward reward, BattleSwitchBoard battleSwitchBoard, EnemyEncounters enemyEncounters, BattleEngine battleEngine, SoundFx soundFx)
         {
-            SwitchBoard switchBoard = new SwitchBoard();
+            
             Console.WriteLine("\nWhat do you say?");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("1. Thank you. Hope you are okay \n2. HA HA HA you Fool");
@@ -154,7 +152,7 @@ namespace opg_evil_xmas_adventure
                     Console.ForegroundColor = ConsoleColor.Gray;
                     break;
             }
-            switchBoard.TwoPaths();
+            switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
         }
 
 

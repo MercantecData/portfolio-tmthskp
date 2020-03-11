@@ -15,21 +15,21 @@ namespace opg_evil_xmas_adventure
         public bool AdultReindeer() 
         {      
             MonsterHP = 10;
-            MonsterDMG = random.Next(1, 6);
+            MonsterDMG = random.Next(1, 7);
             return true;
         } 
         
         public bool XmasGnome() 
         {
             MonsterHP = 12;
-            MonsterDMG = random.Next(1, 6);
+            MonsterDMG = random.Next(1, 7);
             return true;
         }   
 
         public bool XmasElf()
         {
             MonsterHP = 15;
-            MonsterDMG = random.Next(1, 6) * 2;
+            MonsterDMG = random.Next(1, 7);
             return true;
         }
         

@@ -7,12 +7,10 @@ namespace opg_evil_xmas_adventure
     {
         
         /****** Array randomizer af Monster liste ******/
-        public void MonsterEncounter() 
+        public void MonsterEncounter(EnemyEncounters enemyEncounters, BattleEngine battleEngine, Player player, Reward reward, Obstacles obstacles, BattleSwitchBoard battleSwitchBoard, SwitchBoard switchBoard, MonsterObstacle monsterObstacle, SoundFx soundFx) 
         {
-            BattleSwitchBoard battleSwitchBoard = new BattleSwitchBoard();
-            EnemyEncounters enemyEncounters = new EnemyEncounters();
-            SwitchBoard switchBoard = new SwitchBoard();
-            Random RandomMonster = new Random(); //Randomizer
+            
+            var RandomMonster = new Random(); //Randomizer
 
             bool isrunning = true;
            
@@ -31,7 +29,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG Value: " + enemyEncounters.MonsterDMG);
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters, battleEngine, player, reward, obstacles, monsterObstacle, switchBoard, battleSwitchBoard, soundFx);
                 }
                 
                 else if (Youmeet == "XmasGnome ")
@@ -42,7 +40,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG Value: " + enemyEncounters.MonsterDMG);
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters, battleEngine, player, reward, obstacles, monsterObstacle, switchBoard, battleSwitchBoard, soundFx);
                 }
 
                 else if (Youmeet == "XmasElf ")
@@ -54,7 +52,7 @@ namespace opg_evil_xmas_adventure
                     Console.WriteLine("HP: " + enemyEncounters.MonsterHP);
                     Console.WriteLine("DMG Value: " + enemyEncounters.MonsterDMG);
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters);
+                    battleSwitchBoard.MonsterAttackSwitch(enemyEncounters, battleEngine, player, reward, obstacles, monsterObstacle, switchBoard, battleSwitchBoard, soundFx);
                 }
                 
                 else
@@ -62,7 +60,7 @@ namespace opg_evil_xmas_adventure
                     isrunning = false;
                 }
                 Console.ReadLine();
-                switchBoard.TwoPaths();
+                switchBoard.TwoPaths(monsterObstacle, switchBoard, obstacles, player, reward, battleSwitchBoard, enemyEncounters, battleEngine, soundFx);
             }
         }
     }
